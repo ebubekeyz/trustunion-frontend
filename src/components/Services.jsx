@@ -7,12 +7,12 @@ const Services = () => {
   return (
     <div className="py-4">
       <h1 className='text-center text-4xl md:text-5xl font-bold py-4'>Services</h1>
-         <div className='grid grid-cols-1 md:flex md:flex-row gap-4 px-4 mx-auto'>
+         <div className='grid grid-cols-1 md:flex md:flex-row gap-4 align-element'>
 
           {service.slice(0, 3).map((item) => {
             const { id, text, title,image } = item;
             return (
-              <Link  to='/service' key={id} className="card bg-base-100 image-full  shadow-sm">
+              <Link  to='/service' key={id} className="card bg-base-100 image-full w-full shadow-sm">
   <figure>
     <img
       src={image}

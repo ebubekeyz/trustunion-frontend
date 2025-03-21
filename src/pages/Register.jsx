@@ -262,7 +262,7 @@ then close all select boxes: */
     </div>
     <div className="card bg-base-100 max-w-sm md:max-w-lg shrink-0 shadow-2xl">
       <div className="card-body">
-        <fieldset className="fieldset md:grid md:grid-cols-2 md:gap-4">
+        <fieldset className="fieldset ">
           <div><label className="fieldset-label">Email</label>
           <input type="email" className="input" placeholder="Email"  name="email"/></div>
           <div className=""><label className="fieldset-label">First Name</label>
