@@ -5,7 +5,7 @@ import { service } from '../utils';
 
 const Service = () => {
   return (
-    <div className="py-6 max-w-6xl mx-auto align-element">
+    <div className="py-6 max-w-6xl mx-auto px-4">
    
          <div className='grid grid-cols-1 place-items-center md:grid md:grid-cols-3 gap-4 '>
 
