@@ -350,11 +350,18 @@ then close all select boxes: */
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
         <fieldset className="fieldset">
-          <label className="fieldset-label">Email</label>
-          <input type="email" className="input" placeholder="Email" />
-          <label className="fieldset-label">Password</label>
-          <input type="password" className="input" placeholder="Password" />
-          <div><NavLink to="/reset-password" className="link link-hover">Forgot password?</NavLink></div>
+           <div><label className="fieldset-label">Email</label>
+          <input type="email" className="input" placeholder="Email"  name="email"/></div>
+          <div className=""><label className="fieldset-label">First Name</label>
+          <input type="text" className="input" placeholder="First Name" /></div>
+          <div className=""> <label className="fieldset-label">Last Name</label>
+          <input type="text" className="input" placeholder="Last Name" /></div>
+         <div className=""> <label className="fieldset-label">Password</label>
+          <input type="password" className="input" placeholder="Password" /></div>
+         <div className=""> <label className="fieldset-label">Phone</label>
+          <input type="text" className="input" placeholder="Phone" /></div>
+         <div className=""> <label className="fieldset-label">Country</label>
+                  <input type="text" className="input" placeholder="Country" /></div>
           <button type="submit" className="btn btn-neutral mt-4">Login</button>
         </fieldset>
       </div>
