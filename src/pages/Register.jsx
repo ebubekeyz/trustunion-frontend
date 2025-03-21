@@ -253,7 +253,7 @@ then close all select boxes: */
   return (
     <Wrapper>
    <div className="hero bg-base-200 md:min-h-screen">
-  <div className="hero-content flex-col lg:flex-row-reverse max-w-6xl">
+  <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
       <h1 className="text-4xl md:text-5xl font-bold text-amber-200">Open An Account!</h1>
       <p className="py-6 text-amber-50">
