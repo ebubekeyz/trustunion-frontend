@@ -12,7 +12,7 @@ const TopHeader = () => {
       </div>
       <ul
         tabindex="0"
-        class="menu menu-md dropdown-content bg-base-100 rounded-box z-1 mt-7 w-[18rem] p-2 shadow">
+        class="menu menu-md dropdown-content bg-base-100 rounded-box z-1 mt-7 w-[19rem] p-2 shadow">
         <li><NavLink to="/">Home</NavLink></li>
         {/* <li>
           <a>Parent</a>
