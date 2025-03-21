@@ -260,7 +260,7 @@ then close all select boxes: */
       Please ensure you enter your correct information to avoid account suspension. 
       </p>
     </div>
-    <div className="card bg-base-100 w-full max-w-sm md:max-w-lg shrink-0 shadow-2xl">
+    <div className="card bg-base-100 max-w-sm md:max-w-lg shrink-0 shadow-2xl">
       <div className="card-body">
         <fieldset className="fieldset md:grid md:grid-cols-2 md:gap-4">
           <div><label className="fieldset-label">Email</label>
