@@ -387,7 +387,7 @@ then close all select boxes: */
 </fieldset>
          </div>
 
-                 {/* <div className=""> 
+                 <div className=""> 
           <fieldset className="fieldset">
   <legend className="fieldset-legend">Account Type</legend>
   <select defaultValue="Pick a browser" className="select" name="typeOfAccount">
@@ -401,7 +401,7 @@ then close all select boxes: */
 </fieldset>
          </div>
 
-                 <div className="pt-4"><label className="fieldset-label">Date of Birth</label>
+                 {/* <div className="pt-4"><label className="fieldset-label">Date of Birth</label>
            <input type="date" className="input" name="dob"/></div>
 
                  <fieldset className="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
