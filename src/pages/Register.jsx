@@ -362,7 +362,56 @@ then close all select boxes: */
           <input type="text" className="input" placeholder="Phone" /></div>
          <div className=""> <label className="fieldset-label">Country</label>
                   <input type="text" className="input" placeholder="Country" /></div>
-          <button type="submit" className="btn btn-neutral mt-4">Login</button>
+                <div className=""> 
+          <fieldset className="fieldset">
+  <legend className="fieldset-legend">Gender</legend>
+  <select defaultValue="Pick a browser" className="select" name="gender">
+    <option disabled={true}>Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+ 
+</fieldset>
+         </div>
+
+                 <div className=""> 
+          <fieldset className="fieldset">
+  <legend className="fieldset-legend">Marital Status</legend>
+  <select defaultValue="Pick a browser" className="select" name="maritalStatus">
+    <option disabled={true}>Select Marital Status</option>
+    <option value="Single">Single</option>
+    <option value="Married">Married</option>
+    <option value="Divorced">Divorced</option>
+  </select>
+ 
+</fieldset>
+         </div>
+
+                 <div className=""> 
+          <fieldset className="fieldset">
+  <legend className="fieldset-legend">Account Type</legend>
+  <select defaultValue="Pick a browser" className="select" name="typeOfAccount">
+    <option disabled={true}>Select Account Type</option>
+    <option value="Savings Account">Savings Account</option>
+    <option value="Checking Account">Checking Account</option>
+    <option value="Money Market Account">Money Market Account</option>
+    <option value="Certificate Of Deposit Account">Certificate Of Deposit Account</option>
+  </select>
+
+</fieldset>
+         </div>
+
+                 <div className="pt-4"><label className="fieldset-label">Date of Birth</label>
+           <input type="date" className="input" name="dob"/></div>
+
+                 <fieldset className="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
+  <label className="label">
+    <input type="checkbox"  className="checkbox" />
+    Do you agree to our Terms and Conditions?
+  </label>
+</fieldset>
+                
+          <button type="submit" className="btn btn-neutral mt-4">Open Account</button>
         </fieldset>
       </div>
     </div>
