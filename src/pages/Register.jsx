@@ -252,93 +252,6 @@ then close all select boxes: */
   }, [validate3]);
   return (
     <Wrapper>
-   {/* <div className="hero bg-base-200 md:min-h-screen">
-  <div className="hero-content flex-col lg:flex-row-reverse">
-    <div className="text-center lg:text-left">
-      <h1 className="text-4xl md:text-5xl font-bold text-amber-200">Open An Account!</h1>
-      <p className="py-6 text-amber-50">
-      Please ensure you enter your correct information to avoid account suspension. 
-      </p>
-    </div>
-    <div className="card bg-base-100 max-w-sm md:max-w-lg shrink-0 shadow-2xl">
-      <div className="card-body">
-        <fieldset className="fieldset ">
-          <div><label className="fieldset-label">Email</label>
-          <input type="email" className="input" placeholder="Email"  name="email"/></div>
-          <div className=""><label className="fieldset-label">First Name</label>
-          <input type="text" className="input" placeholder="First Name" /></div>
-          <div className=""> <label className="fieldset-label">Last Name</label>
-          <input type="text" className="input" placeholder="Last Name" /></div>
-         <div className=""> <label className="fieldset-label">Password</label>
-          <input type="password" className="input" placeholder="Password" /></div>
-         <div className=""> <label className="fieldset-label">Phone</label>
-          <input type="text" className="input" placeholder="Phone" /></div>
-         <div className=""> <label className="fieldset-label">Country</label>
-                  <input type="text" className="input" placeholder="Country" /></div>
-         <div className=""> 
-          <fieldset className="fieldset">
-  <legend className="fieldset-legend">Gender</legend>
-  <select defaultValue="Pick a browser" className="select" name="gender">
-    <option disabled={true}>Select Gender</option>
-    <option value="Male">Male</option>
-    <option value="Female">Female</option>
-  </select>
- 
-</fieldset>
-         </div>
-
-
-           <div className=""> 
-          <fieldset className="fieldset">
-  <legend className="fieldset-legend">Marital Status</legend>
-  <select defaultValue="Pick a browser" className="select" name="maritalStatus">
-    <option disabled={true}>Select Marital Status</option>
-    <option value="Single">Single</option>
-    <option value="Married">Married</option>
-    <option value="Divorced">Divorced</option>
-  </select>
- 
-</fieldset>
-         </div>
-
-          <div className=""> 
-          <fieldset className="fieldset">
-  <legend className="fieldset-legend">Account Type</legend>
-  <select defaultValue="Pick a browser" className="select" name="typeOfAccount">
-    <option disabled={true}>Select Account Type</option>
-    <option value="Savings Account">Savings Account</option>
-    <option value="Checking Account">Checking Account</option>
-    <option value="Money Market Account">Money Market Account</option>
-    <option value="Certificate Of Deposit Account">Certificate Of Deposit Account</option>
-  </select>
-
-</fieldset>
-         </div>
-
-
-         <div className="pt-4"><label className="fieldset-label">Date of Birth</label>
-           <input type="date" className="input" name="dob"/></div>
-                
-               
-                
-          
-              </fieldset>
-
-              <fieldset className="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
-  <label className="label">
-    <input type="checkbox"  className="checkbox" />
-    Do you agree to our Terms and Conditions?
-  </label>
-</fieldset>
-
-               <button type="submit" className="btn btn-neutral mt-4">Open Account</button>
-              
-      </div>
-    </div>
-  </div>
-</div> */}
-
-       
 <div className="hero bg-base-200 min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse max-w-6xl">
     <div className="text-center lg:text-left">
@@ -347,15 +260,16 @@ then close all select boxes: */
     Please ensure you enter your correct information to avoid account suspension.
       </p>
     </div>
-    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+    <div className="card bg-base-100 w-full md:max-w-lg max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
-        <fieldset className="fieldset">
-           <div><label className="fieldset-label">Email</label>
-          <input type="email" className="input" placeholder="Email"  name="email"/></div>
-          <div className=""><label className="fieldset-label">First Name</label>
+              <fieldset className="fieldset md:grid md:grid-cols-2 md:gap-x-2">
+                 <div className=""><label className="fieldset-label">First Name</label>
           <input type="text" className="input" placeholder="First Name" /></div>
           <div className=""> <label className="fieldset-label">Last Name</label>
           <input type="text" className="input" placeholder="Last Name" /></div>
+           <div className='max-w-lg'><label className="fieldset-label">Email</label>
+          <input type="email" className="input" placeholder="Email"  name="email"/></div>
+         
          <div className=""> <label className="fieldset-label">Password</label>
           <input type="password" className="input" placeholder="Password" /></div>
          <div className=""> <label className="fieldset-label">Phone</label>
@@ -404,10 +318,10 @@ then close all select boxes: */
                  <div className="pt-4"><label className="fieldset-label">Date of Birth</label>
            <input type="date" className="input" name="dob"/></div>
 
-                <div className="">
+                <div className="mt-4">
                   
     <input type="checkbox"  className="checkbox mr-4" />
-    Do you agree to our Terms and Conditions?
+    Do you agree to our <Link to="/terms">Terms and Conditions?</Link>
   
                 </div>
                 
