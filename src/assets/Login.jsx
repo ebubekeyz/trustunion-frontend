@@ -16,6 +16,10 @@ const Wrapper = styled.section`
 
   }
 
+  .login {
+    display: hidden;
+  }
+
 `;
 
 export default Wrapper;

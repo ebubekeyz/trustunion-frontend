@@ -7,10 +7,10 @@ const SubmitBtn = ({ text }) => {
 
   return (
     <Wrapper>
-      <button className="btn form-btn" disabled={isSubmitting}>
+      <button className="btn btn-neutral mt-4 w-full" disabled={isSubmitting}>
         {isSubmitting ? (
           <>
-            <span className="loading"></span>sending...
+           <span className="loading-spinner loading-xs"></span>
           </>
         ) : (
           text || 'submit'
