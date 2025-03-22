@@ -342,7 +342,7 @@ then close all select boxes: */
 <div className="hero bg-base-200 min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse max-w-6xl">
     <div className="text-center lg:text-left">
-      <h1 className="text-4xl md:text-5xl font-bold text-amber-200">Register</h1>
+      <h1 className="text-4xl md:text-5xl font-bold text-amber-200">Open Account</h1>
       <p className="py-6 text-amber-50">
     Please ensure you enter your correct information to avoid account suspension.
       </p>
@@ -405,7 +405,7 @@ then close all select boxes: */
            <input type="date" className="input" name="dob"/></div>
 
                 <div className="">
-                   <fieldset className="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
+                   <fieldset className="fieldset p-4 bg-base-100 border border-base-300 rounded-box ">
   <label className="label">
     <input type="checkbox"  className="checkbox" />
     Do you agree to our Terms and Conditions?
