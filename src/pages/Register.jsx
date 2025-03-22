@@ -405,12 +405,10 @@ then close all select boxes: */
            <input type="date" className="input" name="dob"/></div>
 
                 <div className="">
-                   <fieldset className="fieldset p-4 bg-base-100 border border-base-300 rounded-box ">
-  <label className="label">
-    <input type="checkbox"  className="checkbox" />
+                  
+    <input type="checkbox"  className="checkbox mr-4" />
     Do you agree to our Terms and Conditions?
-  </label>
-</fieldset>
+  
                 </div>
                 
           <button type="submit" className="btn btn-neutral mt-4">Open Account</button>
