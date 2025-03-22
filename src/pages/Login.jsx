@@ -53,7 +53,7 @@ const Login = () => {
   
 
   const user = useSelector((state) => state.userState.user);
-  console.log(user)
+
   const navigate = useNavigate();
   const clickOtp = () => {
     const otp = document.querySelector('.input-otp').value;
