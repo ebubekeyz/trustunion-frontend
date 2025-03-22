@@ -53,12 +53,13 @@ const Login = () => {
   
 
   const user = useSelector((state) => state.userState.user);
+  console.log(user)
   const navigate = useNavigate();
   const clickOtp = () => {
-    const otp = document.querySelector('.otp').value;
-    const popup = document.querySelector('.popup');
+    const otp = document.querySelector('.input-otp').value;
+   
 
-    const formAlert = document.querySelector('.form-alert');
+  
 
     if (otp == user.otp) {
       toast.success('Login successfully');
@@ -125,8 +126,8 @@ Your security is our priority, and we ensure your personal information is kept s
       <div className="card-body">
         <fieldset className="fieldset">
           <label className="fieldset-label">One Time Password</label>
-          <input type="email" className="input" placeholder="Your Otp Code here.." />
-          <button type="submit" className="btn btn-neutral mt-4">Submit</button>
+          <input type="email" className="input input-otp" placeholder="Your Otp Code here.." />
+          <button type="submit" className="btn btn-neutral mt-4" onClick={clickOtp}>Submit</button>
         </fieldset>
       </div>
     </div>
