@@ -3,7 +3,7 @@ import axios from 'axios';
 let productionUrl =
   process.env.NODE_ENV !== 'production'
     ? 'http://localhost:7000/api'
-    : 'https://trustunion-bank.onrender.com/api';
+    : 'https://trustunion-backend.onrender.com/api';
 
 export const customFetch = axios.create({
   baseURL: productionUrl,
