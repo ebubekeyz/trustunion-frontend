@@ -387,7 +387,7 @@ then close all select boxes: */
 </fieldset>
          </div>
 
-                 <div className=""> 
+                 {/* <div className=""> 
           <fieldset className="fieldset">
   <legend className="fieldset-legend">Account Type</legend>
   <select defaultValue="Pick a browser" className="select" name="typeOfAccount">
@@ -409,7 +409,7 @@ then close all select boxes: */
     <input type="checkbox"  className="checkbox" />
     Do you agree to our Terms and Conditions?
   </label>
-</fieldset>
+</fieldset> */}
                 
           <button type="submit" className="btn btn-neutral mt-4">Open Account</button>
         </fieldset>
