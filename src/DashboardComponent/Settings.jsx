@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Form, Link, redirect, useNavigate } from 'react-router-dom';
 import { SubmitBtn } from '../components';
+import { FiEdit } from "react-icons/fi";
 
 export const action =
   (store) =>
@@ -20,10 +21,12 @@ const Settings = () => {
 
   return (
     <section className="grid grid-cols-1 gap-4 mx-auto mt-4 md:mt-[-35rem] mb-4" style={{fontFamily:'var(--ff-header)'}}>
-        <div className="avatar">
-  <div className="ring-primary ring-offset-base-100 w-48 rounded-full ring ring-offset-2 mx-auto max-w-6xl">
+        <div className="avatar ">
+  <div className="ring-primary ring-offset-base-100 w-48 rounded-full ring ring-offset-2 mx-auto max-w-6xl relative cursor-pointer">
     <img src={user.passport} />
+    <FiEdit className="absolute top-[8rem] left-[10rem]"/>
           </div>
+          
         </div>
         
         <div className="grid grid-cols-1 gap-4  mx-auto">
@@ -39,6 +42,9 @@ const Settings = () => {
 
            <div> <label className="fieldset-label" >Email</label>
           <input type="email" className="input"  name="email"/></div>
+
+           
+          <input type="text" className="input"  name="passport" hidden/>
           
           <div> <label className="fieldset-label" >Country</label>
           <input type="text" className="input"  name="country"/></div>

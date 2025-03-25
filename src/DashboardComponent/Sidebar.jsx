@@ -280,8 +280,8 @@ const Sidebar = ({ onClick, onClick2 }) => {
              <p className='text-center mx-auto mt-4 text-sm'>Routing Number: {user.routingNumber}</p>
           </article></p>
           
-          <li><a href="/dashboard">Home</a></li>
-          <li><a>Withdraw</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li><a>Deposit</a></li>
           <li><a>Send</a></li>
           <li><a>Loan</a></li>
            <li><a>Card</a></li>
@@ -314,8 +314,8 @@ const Sidebar = ({ onClick, onClick2 }) => {
           <p className='text-center mx-auto mt-4 text-sm'>Account Number: {user.accountNumber}</p>
           <p className='text-center mx-auto mt-4 text-sm'>Routing Number: {user.routingNumber}</p>
           </article></p>
-          <li><a href="/dashboard">Home</a></li>
-          <li><a>Withdraw</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li><a>Deposit</a></li>
           <li><a>Send</a></li>
           <li><a>Loan</a></li>
            <li><a>Card</a></li>
