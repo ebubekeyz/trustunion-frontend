@@ -24,62 +24,7 @@ const Profile = () => {
 
   return (
     <div>
-      {/* <div className="account">
-        <div className="sub-menu">
-          <Link to="/dashboard/account" className="editAccount">
-            <FiEdit className="icon" />
-            <h4>Update</h4>
-          </Link>
-
-          <Link to="/dashboard/security" className="security">
-            <FiLock className="icon" />
-            <h4>Security </h4>
-          </Link>
-        </div>
-
-        <article className="transfer">
-          <p className="date">Account Details</p>
-          <div className="inner-transfer-cont">
-            <div className="details">
-              <p className="name">Name:</p>
-              <p className="item">
-                {user.firstName} {user.lastName}
-              </p>
-            </div>
-
-            <div className="details">
-              <p className="name">Age:</p>
-              <p className="item">{age} years</p>
-            </div>
-
-            <div className="details">
-              <p className="name">Address:</p>
-              <p className="item">{user.address}</p>
-            </div>
-
-            <div className="details">
-              <p className="name">Occupation:</p>
-              <p className="item">{user.occupation}</p>
-            </div>
-
-            <div className="details">
-              <p className="name">Marital Status:</p>
-              <p className="item">{user.maritalStatus}</p>
-            </div>
-
-            <div className="details">
-              <p className="name">Email:</p>
-              <p className="item">{user.email}</p>
-            </div>
-
-            <div className="details">
-              <p className="name">Country:</p>
-              <p className="item">{user.country}</p>
-            </div>
-          </div>
-        </article>
-      </div> */}
-
+    
 
       <section className="grid grid-cols-1 gap-4 mx-auto mt-4 md:mt-[-35rem] mb-4" style={{fontFamily:'var(--ff-header)'}}>
         <div className="avatar">

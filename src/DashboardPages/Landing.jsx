@@ -28,10 +28,16 @@ export const loader = (store) => async () => {
 };
 
 const Landing = () => {
-  const { withdrawBalance, balance, deposit, user } = useSelector(
+  const { withdrawBalance, balance, deposit, withdraw, user } = useSelector(
     (state) => state.userState
   );
 
+  
+  const withdrawFilter = Object.values(withdraw).filter(
+    (item) => item.user === user._id
+  );
+
+  
   const totalBalance = balance - withdrawBalance;
   const bal = {
     bal: totalBalance,
@@ -78,7 +84,7 @@ const Landing = () => {
       }
     );
     setShow2(false);
-    window.location.reload('');
+    window.location.replace('/dashboard/outgoing');
   };
   return (
     // <Wrapper>
@@ -233,7 +239,7 @@ const Landing = () => {
     <h3 className="font-bold">Credit Alert</h3>
     <div className="text-xs">From {accountName}</div>
   </div>
-  <button className="btn btn-sm" onClick={() => removeAlert(_id)}>View</button>
+  <div className="btn btn-sm cursor-pointer" onClick={() => removeAlert(_id)}>View</div>
 </div>
          )
       }) : ''}
@@ -282,8 +288,8 @@ const Landing = () => {
 
 
 
-<div className="mt-24 grid grid-cols-2 gap-2 items-center ">
-  <Link  to="/dashboard/sendMoney" className="card bg-base-900 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(255,0,0,0.5)'}}>
+<div className="mt-24 grid grid-cols-2 gap-2 items-center md:w-[40rem] mx-auto ">
+  <Link  to="/dashboard/sendMoney" className="card bg-base-900 image-full  w-full  shadow-sm mx-auto" style={{background:'rgb(255,0,0,0.5)'}}>
   <figure>
     <img
       src=""
@@ -371,11 +377,11 @@ const Landing = () => {
   </figure>
   <div className="card-body">
    <h2 className="card-title text-amber-100">Balance</h2>
-    <h2 className="card-title text-2xl">$ {format(totalBalance) || 0}</h2>
+    <h2 className="card-title text-2xl">$ 0</h2>
     <Link to="/" className="btn btn-xs w-24 ">Fund Card</Link>
 
      <h2 className="card-title text-amber-100">Card Number</h2>
-    <h2 className="card-title text-2xl">0000 0000 0000 0000</h2>
+    <h2 className="card-title text-2xl">5122 3133 1002 2244</h2>
 
      <div className="card-actions flex items-center justify-start">
        <h2 className="card-title text-amber-100 mr-12">Expiry</h2>
@@ -400,19 +406,20 @@ const Landing = () => {
 {/* TRANSACTIONS */}
 <div className="flex justify-between items-center">
   <h1  style={{fontSize: '1.5rem', textAlign: 'center', margin: '1.5rem'}}>Transactions</h1>
-  <Link to="/" className="btn btn-ghost btn-md capitalize text-primary text-lg">view all</Link>
+  <Link to="/dashboard/transaction" className="btn btn-ghost btn-md capitalize text-primary text-lg">view more</Link>
 </div>
-   {filterID.slice(0, 2).map((item) => {
+   {withdrawFilter.slice(0, 2).map((item) => {
           const { createdAt, amount, accountName, accountNumber, bank, date1, date2, _id } = item;
           return (
             <div className="card bg-base-100 w-full shadow-md p-4 my-4 bg-gray-50" style={{fontFamily:'var(--ff-primary)'}}  >
   <div className="card-body ">
-    <h2 className="card-title text-amber-800">Transfer from: <span className="text-black">{accountName}</span>  </h2>
+    <h2 className="card-title text-amber-800">Receiver: <span className="text-black">{accountName}</span>  </h2>
                 <h2 className="card-title text-amber-800">Bank Name: <span className="text-black">{bank} </span> </h2>
                  {/* <h2 className="card-title text-amber-800">Transaction ID: <span className="text-black">{_id} </span> </h2> */}
-    <h2 className="card-title text-amber-800 text-sm">Date: <span className="text-black">{date2} </span> </h2>
     
-    <div className="card-actions justify-end">
+    
+                <div className="card-actions flex justify-between items-center">
+                  <h2 className="card-title text-amber-800 text-sm">Date: <span className="text-black">{date2} </span> </h2>
       <h1 className="text-xl"><span className="text-amber-800 ">Amount:</span> ${format(amount)} </h1>
     </div>
   </div>

@@ -1,34 +1,28 @@
 import { Link, useRouteError } from 'react-router-dom';
-import Wrapper from '../assets/DashboardWrapper/Error';
-import img from '../assets/not-found.svg';
+
 
 const Error = () => {
   const error = useRouteError();
 
   if (error.status === 404) {
     return (
-      <Wrapper>
-        <div className="error">
-          <img src={img} alt="not-found" />
-          <h1 className="header">Page not found</h1>
-          <p className="text">
-            Sorry, we couldn’t find the page you’re looking for.
-          </p>
-          <div className="link ">
-            <Link to="/dashboard" className="btn">
-              Go back home
-            </Link>
-          </div>
-        </div>
-      </Wrapper>
+      <div className="grid grid-cols-2 place-items-center h-screen max-w-xl mx-auto p-4">
+        <h4 className="text-amber-500">Page not Found <Link to="/dashboard" className='btn btn-primary btn-xs'>Go back to Dashboard</Link></h4>
+
+           <img src="/404.svg" className="w-80" alt="not-found" />
+      </div>
     );
   }
   return (
-    <Wrapper>
-      <div>
-        <h4>Error... </h4>
+  
+   
+       <div className="grid grid-cols-2 place-items-center h-screen max-w-xl mx-auto px-4">
+        <h4 className="text-amber-500">Something went wrong. Please try again or contact Technical team.  <Link to="/dashboard" className='btn btn-primary btn-xs'>Go back to Dashboard</Link></h4>
+      <img src="/error.svg" className="w-80" alt="not-found" />
+    
       </div>
-    </Wrapper>
+ 
+   
   );
 };
 export default Error;

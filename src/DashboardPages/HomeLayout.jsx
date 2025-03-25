@@ -10,7 +10,7 @@ const HomeLayout = () => {
       {user && (
         <div>
           <Navbar />
-          <div className="md:ml-[19.2em] px-4 " >
+          <div className="md:ml-[19.2em] px-4 md:mt-[-35rem]" >
             <Outlet />
                  <FooterDashboard/>
           </div>

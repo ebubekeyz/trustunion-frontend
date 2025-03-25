@@ -35,6 +35,7 @@ import { loader as UpdateDepositLoader } from './DashboardPages/UpdateDeposit';
 import { loader as UpdateLoader } from './DashboardPages/Update';
 import { loader as SetTransferDetailsLoader } from './DashboardPages/SetTransferDetails';
 import { loader as TransactionLoader } from './DashboardPages/Transaction';
+import { loader as OutgoingLoader } from './DashboardPages/Outgoing';
 import { loader as SingleServiceLoader } from './pages/SingleService';
 import { loader as LandingLoader } from './DashboardPages/Landing';
 import { loader as SendMoneyLoader } from './DashboardPages/SendMoney';
@@ -102,6 +103,7 @@ import {
   Delete,
   Cards,
   Settings,
+  Outgoing
 } from './DashboardPages';
 
 import { action as RequestAction } from './pages/Request';
@@ -334,6 +336,11 @@ const router = createBrowserRouter([
         path: '/dashboard/transaction',
         element: <Transaction />,
         loader: TransactionLoader(store),
+      },
+      {
+        path: '/dashboard/outgoing',
+        element: <Outgoing />,
+        loader: OutgoingLoader(store),
       },
       {
         path: '/dashboard/incoming-transaction',
