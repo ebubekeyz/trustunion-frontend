@@ -26,10 +26,10 @@ const Settings = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 gap-4 items-center text-center mx-auto">
+        <div className="grid grid-cols-1 gap-4  mx-auto">
          <Form method="post" className="card-body form-control ">
         <fieldset className="fieldset md:grid md:grid-cols-2 gap-4">
-         <div> <label className="fieldset-label" >FirstName</label>
+         <div className=""> <label className="fieldset-label" >FirstName</label>
           <input type="text" className="input"  name="firstName"/></div>
           
           <div> <label className="fieldset-label" >LastName</label>
@@ -37,11 +37,85 @@ const Settings = () => {
 
            
 
-           <div> <label className="fieldset-label" >FirstName</label>
-          <input type="text" className="input"  name="firstName"/></div>
+           <div> <label className="fieldset-label" >Email</label>
+          <input type="email" className="input"  name="email"/></div>
           
-          <div> <label className="fieldset-label" >LastName</label>
-          <input type="text" className="input"  name="lastName"/></div>
+          <div> <label className="fieldset-label" >Country</label>
+          <input type="text" className="input"  name="country"/></div>
+
+
+           <div> <label className="fieldset-label" >Occupation</label>
+          <input type="text" className="input"  name="occupation"/></div>
+
+
+          <div> <label className="fieldset-label" >Phone</label>
+          <input type="text" className="input"  name="phone"/></div>
+
+
+           
+          
+          <div> <label className="fieldset-label" >Address</label>
+          <input type="text" className="input"  name="address"/></div>
+
+
+  <fieldset className="fieldset">
+  <legend className="fieldset-label">Identity</legend>
+  <select defaultValue="Pick a browser" className="select" name="identity">
+    <option disabled={true}>Select Identity</option>
+    <option value="Social Security Number">Social Security Number</option>
+    <option value="Passport Number">Passport Number</option>
+    <option value="Driver's License Number ">Driver's License Number </option>
+  </select>
+ 
+</fieldset>
+
+
+
+<div> <label className="fieldset-label" >ID Number</label>
+          <input type="text" className="input"  name="IdNumber"/></div>
+              
+
+
+            <div className="">  
+              <label className="fieldset-label" >ID File</label>
+              <input type="file" className="file-input" /></div>
+  
+
+  <div className=""> 
+          <fieldset className="fieldset">
+  <legend className="fieldset-label">Marital Status</legend>
+  <select defaultValue="Pick a browser" className="select" name="maritalStatus">
+    <option disabled={true}>Select Marital Status</option>
+    <option value="Single">Single</option>
+    <option value="Married">Married</option>
+    <option value="Divorced">Divorced</option>
+  </select>
+ 
+</fieldset>
+         </div>
+
+
+
+                <div className=""><label className="fieldset-label">Date of Birth</label>
+           <input type="date" className="input" name="dob"/></div>
+
+
+
+
+
+           <fieldset className="fieldset">
+  <legend className="fieldset-label">Employment Status</legend>
+  <select defaultValue="Pick a browser" className="select" name="maritalStatus">
+    <option disabled={true}>Select Employment Status</option>
+    <option value="Student">Student</option>
+    <option value="Unemployed">Unemployed</option>
+    <option value="Retired">Retired</option>
+    <option value="Self-Employed">Self-Employed</option>
+    <option value="Employed">Employed</option>
+  </select>
+ 
+</fieldset>
+      
                 
              
         </fieldset>
