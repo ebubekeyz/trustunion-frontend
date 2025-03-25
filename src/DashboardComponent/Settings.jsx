@@ -84,7 +84,7 @@ const Settings = () => {
   <legend className="fieldset-label">Relationship</legend>
   <select defaultValue="Pick a browser" className="select" name="identity">
     <option disabled={true}>Select Identity</option>
-    <option value="Brother">Brotherr</option>
+    <option value="Brother">Brother</option>
     <option value="Father">Father</option>
     <option value="Mother">Mother</option>
     <option value="Sister">Sister</option>
