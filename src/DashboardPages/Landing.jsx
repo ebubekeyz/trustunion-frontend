@@ -283,7 +283,7 @@ const Landing = () => {
 
 
 <div className="mt-24 grid grid-cols-2 gap-2 items-center ">
-  <div className="card bg-base-100 image-full  w-full shadow-sm mx-auto">
+  <div className="card bg-base-900 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(255,0,0,0.5)'}}>
   <figure>
     <img
       src=""
@@ -300,7 +300,7 @@ const Landing = () => {
 
 
 
-<div className="card bg-base-100 image-full  w-full shadow-sm mx-auto">
+<div className="card bg-base-100 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(0,225,0,0.5)'}}>
   <figure>
     <img
       src=""
@@ -320,7 +320,7 @@ const Landing = () => {
 
 
 
-<div className="card bg-base-100 image-full  w-full shadow-sm mx-auto">
+<div className="card bg-base-100 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(0,0,225,0.5)'}}>
   <figure>
     <img
       src=""
@@ -340,7 +340,7 @@ const Landing = () => {
 
 
 
-<div className="card bg-base-100 image-full  w-full shadow-sm mx-auto">
+<div className="card bg-base-100 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(255,100,0,0.5)'}}>
   <figure>
     <img
       src=""
@@ -356,61 +356,7 @@ const Landing = () => {
 </div>
 </div>
 
-{/* <section className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center md:max-w-4xl mx-auto p-4" style={{fontFamily:'var(--ff-primary)'}}>
-  <div className="card bg-base-100 image-full w-48 shadow-sm cursor-pointer h-28 " style={{background: 'rgba(255,255,0,0.7)'}}>
-  <figure>
-    <img
-      src=""
-      alt="" />
-  </figure>
-  <div className="card-body grid grid-cols-1 place-items-center">
-    <Link to="/dashboard/sendMoney" className="card-title">Send</Link>
-    
-  </div>
-</div>
 
-
-
- <div className="card bg-base-100 image-full w-48 shadow-sm cursor-pointer h-28" style={{background: 'rgba(255,0,0,0.7)'}}>
-  <figure>
-    <img
-      src=""
-      alt="" />
-  </figure>
-  <div className="card-body grid grid-cols-1 place-items-center">
-    <Link to="/dashboard/sendMoney" className="card-title">Loan</Link>
-   
-  </div>
-</div>
-
-<div className="card bg-base-100 image-full w-48 shadow-sm cursor-pointer h-28 " style={{background: "rgba(0,0,255,0.7) ", }}>
-  <figure>
-    <img
-      src=""
-      alt="" />
-  </figure>
-  <div className="card-body grid grid-cols-1 place-items-center">
-     <Link to="/dashboard/transaction" className="card-title">Transactions</Link>
-   
-  </div>
-</div>
-
-        
-
-        
-  <div className="card bg-base-100 image-full w-48 shadow-sm cursor-pointer h-28 " style={{background: 'rgba(0,255,0,0.7)'}}>
-  <figure>
-    <img
-      src=""
-      alt="" />
-  </figure>
-  <div className="card-body grid grid-cols-1 place-items-center">
-    <Link to="/dashboard/settings" className="card-title">Settings</Link>
-  </div>
-</div>
-
-
-</section> */}
 
 
 
