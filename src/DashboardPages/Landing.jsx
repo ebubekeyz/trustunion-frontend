@@ -257,7 +257,7 @@ const Landing = () => {
 
 
 
- <div className="card bg-[#543ae8] image-full w-full md:w-[28rem] shadow-sm md:mx-auto">
+ <div className="card bg-[#543ae8] image-full w-[80%] md:w-[28rem] shadow-sm mx-auto mt-[-10rem]">
   <figure>
     <img
       src="/global.jpeg"
