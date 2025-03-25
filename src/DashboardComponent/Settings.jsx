@@ -52,10 +52,41 @@ const Settings = () => {
           <input type="text" className="input"  name="phone"/></div>
 
 
+
+          <fieldset className="fieldset">
+  <legend className="fieldset-label">Gender</legend>
+  <select defaultValue="Pick a browser" className="select" name="gender">
+    <option disabled={true}>Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+ 
+</fieldset>
+
+
            
           
           <div> <label className="fieldset-label" >Address</label>
           <input type="text" className="input"  name="address"/></div>
+
+            <div> <label className="fieldset-label" >Next of Kin</label>
+          <input type="text" className="input"  name="noc"/></div>
+
+
+
+             <fieldset className="fieldset">
+  <legend className="fieldset-label">Relationship</legend>
+  <select defaultValue="Pick a browser" className="select" name="identity">
+    <option disabled={true}>Select Identity</option>
+    <option value="Brother">Brotherr</option>
+    <option value="Father">Father</option>
+    <option value="Mother">Mother</option>
+    <option value="Sister">Sister</option>
+    <option value="Uncle">Uncle</option>
+    <option value="Aunty">Aunty</option>
+  </select>
+ 
+</fieldset>
 
 
   <fieldset className="fieldset">
@@ -77,7 +108,7 @@ const Settings = () => {
 
 
             <div className="">  
-              <label className="fieldset-label" >ID File</label>
+              <label className="fieldset-label" >Upload ID</label>
               <input type="file" className="file-input" /></div>
   
 
