@@ -257,8 +257,23 @@ const Landing = () => {
 
 
 
+ <div className="card bg-[#543ae8] image-full w-full md:w-[28rem] shadow-sm md:mx-auto">
+  <figure>
+    <img
+      src="/global.jpeg"
+      alt="Shoes" />
+  </figure>
+   <div className="card-body text-center md:pt-4 pt-2" style={{fontFamily: 'var(--ff-primary)'}}>
+    <div className="bg-black p-4 rounded-full mx-auto h-auto w-auto">
+      < MdOutlineAccountBalance className="text-4xl mx-auto"/>
+    </div>
+    <h2 className="card-title mx-auto text-[1.3rem] ">Total Banlance</h2>
+    
+   <h2 className="card-title mx-auto text-2xl">$ {format(totalBalance) || 0}</h2>
+  </div>
+</div>
 
- <div className="md:mt-[-11rem] mt-[-12rem] " >
+ {/* <div className="md:mt-[-11rem] mt-[-12rem] " >
       <div className="card image-full w-[24rem] bg-[rgb(231, 224, 255)] h-64 md:w-[24rem] shadow-sm mx-auto">
   <figure>
     <img
@@ -274,7 +289,7 @@ const Landing = () => {
    <h2 className="card-title mx-auto text-2xl">$ {format(totalBalance) || 0}</h2>
   </div>
 </div>
-    </div>
+    </div> */}
 
 
     </div>
