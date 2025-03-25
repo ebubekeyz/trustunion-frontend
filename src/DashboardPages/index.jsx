@@ -24,3 +24,5 @@ export { default as ChangePassword } from './ChangePassword';
 export { default as Delete } from './Delete';
 export { default as Cards } from './Cards';
 export { default as ChangePhoto } from './ChangePhoto';
+export { default as Settings } from './Settings';
+export { default as Profile } from './Profile';

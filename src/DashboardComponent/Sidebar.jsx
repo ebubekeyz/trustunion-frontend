@@ -221,7 +221,7 @@ const Sidebar = ({ onClick, onClick2 }) => {
         {/* start */}
         <div className="navbar bg-base-100 shadow-sm">
           <div className="flex-1">
-            
+             <a className="text-xl">TrustunionBank</a>
             <label htmlFor="my-drawer" className="drawer-button md:hidden"> <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
       </div></label>
@@ -250,12 +250,12 @@ const Sidebar = ({ onClick, onClick2 }) => {
         tabIndex={0}
         className="menu menu-md dropdown-content bg-base-100 rounded-box z-1 mt-5 w-52 p-2 shadow">
         <li>
-          <NavLink to="/dashboard/accountInfo" className="justify-between">
+          <NavLink to="/dashboard/profile" className="justify-between">
             Profile
            
           </NavLink>
         </li>
-        <li><a>Settings</a></li>
+        <li><a href="/dashboard/settings">Settings</a></li>
         <li onClick={handleLogout}><a>Logout</a></li>
       </ul>
     </div>
@@ -286,7 +286,7 @@ const Sidebar = ({ onClick, onClick2 }) => {
           <li><a>Loan</a></li>
            <li><a>Card</a></li>
            <li><a  onClick={clickNotice} href="/dashboard/notification">Notification <sup className="num">{num}</sup></a></li>
-           <li><a>Settings</a></li>
+           <li><a href="/dashboard/settings">Settings</a></li>
           
           
     </ul>
@@ -320,7 +320,7 @@ const Sidebar = ({ onClick, onClick2 }) => {
           <li><a>Loan</a></li>
            <li><a>Card</a></li>
            <li><a>Notification <sup className="num">{num}</sup></a> </li>
-           <li><a>Settings</a></li>
+           <li><a href="/dashboard/settings">Settings</a></li>
           
           
     </ul>

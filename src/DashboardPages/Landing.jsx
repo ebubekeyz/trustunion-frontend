@@ -253,7 +253,8 @@ const Landing = () => {
    
   </div>
 </div>
-    </div>
+
+
 
 
 
@@ -275,6 +276,8 @@ const Landing = () => {
 </div>
     </div>
 
+
+    </div>
 
 
 

@@ -44,6 +44,7 @@ import ChangePhoto, {
   loader as ChangePhotoLoader,
 } from './DashboardPages/ChangePhoto';
 import { loader as AccountLoader } from './DashboardPages/Account';
+import { loader as SettingsLoader } from './DashboardPages/Settings';
 import { loader as NotificationLoader } from './DashboardPages/Notification';
 import NotificationMessage, {
   loader as NotificationMessageLoader,
@@ -51,9 +52,13 @@ import NotificationMessage, {
 import AccountInfo, {
   loader as AccountInfoLoader,
 } from './DashboardPages/AccountInfo';
+import Profile, {
+  loader as ProfileLoader,
+} from './DashboardPages/Profile';
 import Security, { loader as SecurityLoader } from './DashboardPages/Security';
 
 import { action as ChangePhotoAction } from './DashboardComponent/ChangePhoto';
+import { action as SettingsAction } from './DashboardComponent/Settings';
 import { action as SendMoneyAction } from './DashboardComponent/SendMoney';
 import { action as ChangePasswordAction } from './DashboardComponent/ChangePassword';
 import { action as WithdrawAction } from './DashboardComponent/Withdraw';
@@ -96,6 +101,7 @@ import {
   Withdraw,
   Delete,
   Cards,
+  Settings,
 } from './DashboardPages';
 
 import { action as RequestAction } from './pages/Request';
@@ -207,6 +213,12 @@ const router = createBrowserRouter([
         action: SendMoneyAction(store),
       },
       {
+        path: '/dashboard/settings',
+        element: <Settings />,
+        loader: SettingsLoader(store),
+        action: SettingsAction(store),
+      },
+      {
         path: '/dashboard/adminDeposit',
         element: <AdminDeposit />,
         loader: AdminDepositLoader(store),
@@ -302,9 +314,9 @@ const router = createBrowserRouter([
         action: NotificationMessageAction(store),
       },
       {
-        path: '/dashboard/accountInfo',
-        element: <AccountInfo />,
-        loader: AccountInfoLoader(store),
+        path: '/dashboard/profile',
+        element: <Profile />,
+        loader: ProfileLoader(store),
       },
       {
         path: '/dashboard/users',

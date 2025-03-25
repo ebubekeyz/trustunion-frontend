@@ -21,3 +21,4 @@ export { default as ChangePassword } from './ChangePassword';
 export { default as Delete } from './Delete';
 export { default as ChangePhoto } from './ChangePhoto';
 export { default as FooterDashboard } from './FooterDashboard';
+export { default as Settings } from './Settings';
