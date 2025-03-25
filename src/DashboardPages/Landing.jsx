@@ -241,7 +241,8 @@ const Landing = () => {
 
 
 {/* begin */}
-      <div className="card bg-[#543ae8] image-full w-full md:w-[28rem] shadow-sm md:mx-auto">
+     <div className="relative">
+       <div className="card bg-[#543ae8] image-full w-full md:w-[28rem] shadow-sm md:mx-auto">
   <figure>
     <img
       src="/global.jpeg"
@@ -257,7 +258,7 @@ const Landing = () => {
 
 
 
- <div className="card bg-[#543ae8] image-full w-[80%] md:w-[28rem] shadow-sm mx-auto mt-[-10rem]">
+ <div className="card bg-[#543ae8] image-full w-[80%] md:w-[40%]  shadow-sm mx-auto absolute top-24 left-0 right-0 ">
   <figure>
     <img
       src="/global.jpeg"
@@ -272,6 +273,7 @@ const Landing = () => {
    <h2 className="card-title mx-auto text-2xl">$ {format(totalBalance) || 0}</h2>
   </div>
 </div>
+     </div>
 
  {/* <div className="md:mt-[-11rem] mt-[-12rem] " >
       <div className="card image-full w-[24rem] bg-[rgb(231, 224, 255)] h-64 md:w-[24rem] shadow-sm mx-auto">
