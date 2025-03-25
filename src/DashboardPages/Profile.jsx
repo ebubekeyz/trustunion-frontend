@@ -89,8 +89,8 @@ const Profile = () => {
         </div>
         
         <div className="grid grid-cols-1 gap-4 items-center text-center mx-auto">
-          <h1 className='font-semibold text-2xl'>{user.firstName} {user.lastName}</h1>
-          <h1 className='font-semibold text-2xl'>{user.email}</h1>
+          <h1 className='font-semibold text-xl'>{user.firstName} {user.lastName}</h1>
+          <h1 className='font-semibold text-xl'>{user.email}</h1>
           <Link to="/dashboard/settings" className="btn btn-block btn-md cursor-pointer">Edit Profile</Link>
        </div>
       </section>
