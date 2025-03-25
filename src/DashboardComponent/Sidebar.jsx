@@ -281,8 +281,8 @@ const Sidebar = ({ onClick, onClick2 }) => {
           </article></p>
           
           <li><a href="/dashboard">Dashboard</a></li>
-          <li><a>Deposit</a></li>
           <li><a>Send</a></li>
+          <li><a>Deposit</a></li>
           <li><a>Loan</a></li>
            <li><a>Card</a></li>
            <li><a  onClick={clickNotice} href="/dashboard/notification">Notification <sup className="num">{num}</sup></a></li>
@@ -315,8 +315,8 @@ const Sidebar = ({ onClick, onClick2 }) => {
           <p className='text-center mx-auto mt-4 text-sm'>Routing Number: {user.routingNumber}</p>
           </article></p>
           <li><a href="/dashboard">Dashboard</a></li>
+           <li><a>Send</a></li>
           <li><a>Deposit</a></li>
-          <li><a>Send</a></li>
           <li><a>Loan</a></li>
            <li><a>Card</a></li>
            <li><a>Notification <sup className="num">{num}</sup></a> </li>
