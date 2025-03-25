@@ -283,77 +283,77 @@ const Landing = () => {
 
 
 <div className="mt-24 grid grid-cols-2 gap-2 items-center ">
-  <div className="card bg-base-900 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(255,0,0,0.5)'}}>
+  <Link  to="/dashboard/sendMoney" className="card bg-base-900 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(255,0,0,0.5)'}}>
   <figure>
     <img
       src=""
       alt="" />
   </figure>
   <div className="card-body grid grid-cols-1 place-items-center">
-    <Link to="/dashboard/sendMoney" className="card-title">Send</Link>
+    <p className="card-title">Send</p>
     {/* <p>A card component has a figure, a body part, and inside body there are title and actions parts</p> */}
     {/* <div className="card-actions justify-center">
       <button className="btn btn-primary">Buy Now</button>
     </div> */}
   </div>
-</div>
+</Link>
 
 
 
-<div className="card bg-base-100 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(0,225,0,0.5)'}}>
+<Link  to="/dashboard" className="card bg-base-100 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(0,225,0,0.5)'}}>
   <figure>
     <img
       src=""
       alt="" />
   </figure>
   <div className="card-body grid grid-cols-1 place-items-center">
-    <Link to="/dashboard" className="card-title">Loan</Link>
+    <p className="card-title">Loan</p>
     {/* <p>A card component has a figure, a body part, and inside body there are title and actions parts</p> */}
     {/* <div className="card-actions justify-center">
       <button className="btn btn-primary">Buy Now</button>
     </div> */}
   </div>
-</div>
+</Link>
 
 
 
 
 
 
-<div className="card bg-base-100 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(0,0,225,0.5)'}}>
+<Link to="/dashboard/allTransactions" className="card bg-base-100 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(0,0,225,0.5)'}}>
   <figure>
     <img
       src=""
       alt="" />
   </figure>
   <div className="card-body grid grid-cols-1 place-items-center">
-    <Link to="/dashboard/allTransactions" className="card-title">Transactions</Link>
+    <p className="card-title">Transactions</p>
     {/* <p>A card component has a figure, a body part, and inside body there are title and actions parts</p> */}
     {/* <div className="card-actions justify-center">
       <button className="btn btn-primary">Buy Now</button>
     </div> */}
   </div>
-</div>
+</Link>
 
 
 
 
 
 
-<div className="card bg-base-100 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(255,100,0,0.5)'}}>
+<Link to="/dashboard/settings" className="card bg-base-100 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(255,100,0,0.5)'}}>
   <figure>
     <img
       src=""
       alt="" />
   </figure>
   <div className="card-body grid grid-cols-1 place-items-center">
-    <Link to="/dashboard/settings" className="card-title">Settings</Link>
+    <p  className="card-title">Settings</p>
     {/* <p>A card component has a figure, a body part, and inside body there are title and actions parts</p> */}
     {/* <div className="card-actions justify-center">
       <button className="btn btn-primary">Buy Now</button>
     </div> */}
   </div>
-</div>
+</Link>
 </div>
 
 
