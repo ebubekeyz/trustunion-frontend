@@ -275,33 +275,48 @@ const Landing = () => {
 </div>
      </div>
 
- {/* <div className="md:mt-[-11rem] mt-[-12rem] " >
-      <div className="card image-full w-[24rem] bg-[rgb(231, 224, 255)] h-64 md:w-[24rem] shadow-sm mx-auto">
+
+
+    </div>
+
+
+
+
+<div className="mt-24 grid grid-cols-2 gap-2 items-center">
+  <div className="card bg-base-100 image-full w-full shadow-sm mx-auto">
   <figure>
     <img
-      src=""
-      alt="" className=""/>
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      alt="Shoes" />
   </figure>
-  <div className="card-body text-center md:pt-4 pt-2" style={{fontFamily: 'var(--ff-primary)'}}>
-    <div className="bg-black p-4 rounded-full mx-auto h-auto w-auto">
-      < MdOutlineAccountBalance className="text-4xl mx-auto"/>
+  <div className="card-body">
+    <h2 className="card-title">Card Title</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions justify-end">
+      <button className="btn btn-primary">Buy Now</button>
     </div>
-    <h2 className="card-title mx-auto text-[1.3rem] ">Total Banlance</h2>
-    
-   <h2 className="card-title mx-auto text-2xl">$ {format(totalBalance) || 0}</h2>
   </div>
 </div>
-    </div> */}
 
 
+
+<div className="card bg-base-100 image-full w-full shadow-sm mx-auto">
+  <figure>
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      alt="Shoes" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title">Card Title</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions justify-end">
+      <button className="btn btn-primary">Buy Now</button>
     </div>
+  </div>
+</div>
+</div>
 
-
-
-
-
-
-<section className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center md:max-w-4xl mx-auto p-4" style={{fontFamily:'var(--ff-primary)'}}>
+{/* <section className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center md:max-w-4xl mx-auto p-4" style={{fontFamily:'var(--ff-primary)'}}>
   <div className="card bg-base-100 image-full w-48 shadow-sm cursor-pointer h-28 " style={{background: 'rgba(255,255,0,0.7)'}}>
   <figure>
     <img
@@ -355,7 +370,7 @@ const Landing = () => {
 </div>
 
 
-</section>
+</section> */}
 
 
 
