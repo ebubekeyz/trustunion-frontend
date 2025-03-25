@@ -27,16 +27,26 @@ const Settings = () => {
         </div>
         
         <div className="grid grid-cols-1 gap-4 items-center text-center mx-auto">
-         <Form method="post" className="card-body form-control">
+         <Form method="post" className="card-body form-control ">
         <fieldset className="fieldset md:grid md:grid-cols-2 gap-4">
-         <div> <label className="fieldset-label" >Username</label>
-          <input type="text" className="input" placeholder="Username" name="username"/></div>
-          <label className="fieldset-label">Password</label>
-          <input type="password" className="input" placeholder="Password" name="password" />
-         
+         <div> <label className="fieldset-label" >FirstName</label>
+          <input type="text" className="input"  name="firstName"/></div>
+          
+          <div> <label className="fieldset-label" >LastName</label>
+          <input type="text" className="input"  name="lastName"/></div>
+
+           
+
+           <div> <label className="fieldset-label" >FirstName</label>
+          <input type="text" className="input"  name="firstName"/></div>
+          
+          <div> <label className="fieldset-label" >LastName</label>
+          <input type="text" className="input"  name="lastName"/></div>
                 
-                <SubmitBtn text="Update"/>
+             
         </fieldset>
+
+           <SubmitBtn text="Update"/>
               </Form>
           
        </div>
