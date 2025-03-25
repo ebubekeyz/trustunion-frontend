@@ -225,7 +225,7 @@ const Sidebar = ({ onClick, onClick2 }) => {
             <label htmlFor="my-drawer" className="drawer-button md:hidden"> <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
       </div></label>
-    <NavLink to="/dashboard" className="text-xl md:hidden">TrustunionBank</NavLink>
+    <NavLink to="/dashboard" className="text-xl md:hidden">TrustunionBan</NavLink>
   </div>
   <div className="flex-none">
     <div className="dropdown dropdown-end">
@@ -250,10 +250,10 @@ const Sidebar = ({ onClick, onClick2 }) => {
         tabIndex={0}
         className="menu menu-md dropdown-content bg-base-100 rounded-box z-1 mt-5 w-52 p-2 shadow">
         <li>
-          <a className="justify-between">
+          <NavLink to="/dashboard/accountInfo" className="justify-between">
             Profile
            
-          </a>
+          </NavLink>
         </li>
         <li><a>Settings</a></li>
         <li onClick={handleLogout}><a>Logout</a></li>
@@ -267,9 +267,19 @@ const Sidebar = ({ onClick, onClick2 }) => {
   </div>
   <div className="drawer-side md:hidden">
     <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-    <ul className="menu bg-[#6b551d] text-amber-50 min-h-full w-80 p-4 ">
+    <ul className="menu bg-[#6b551d] text-amber-50 min-h-full w-80 p-4  ">
       {/* Sidebar content here */}
-      <p className="mb-10 ml-2 text-lg text-amber-50"><NavLink to="/">TrustUnion<span className="text-amber-400">Bank</span></NavLink></p>
+      <p className="mb-10 text-lg text-amber-50"><article><div className="btn-ghost avatar grid grid-cols-1 items-center place-items-center mx-auto">
+        <div className="rounded-full w-[3.2rem]">
+              <img src={`${passport}`} alt="passport" className="pass" />
+            </div>
+            
+               
+          </div>   <p className='text-center mx-auto mt-4 text-sm'>Username: {user.username}</p>
+            <p className='text-center mx-auto mt-4 text-sm'>Account Number: {user.accountNumber}</p>
+             <p className='text-center mx-auto mt-4 text-sm'>Routing Number: {user.routingNumber}</p>
+          </article></p>
+          
           <li><a>Home</a></li>
           <li><a>Withdraw</a></li>
           <li><a>Send</a></li>
@@ -294,7 +304,16 @@ const Sidebar = ({ onClick, onClick2 }) => {
     <label htmlFor="my-drawer-2" aria-label="close sidebar" className=""></label>
    <ul className="menu bg-[#6b551d] text-amber-50 min-h-full w-80 p-4"  >
       {/* Sidebar content here */}
-      <p className="mb-10 ml-2 text-lg text-amber-50"><NavLink to="/">TrustUnion<span className="text-amber-400">Bank</span></NavLink></p>
+      <p className="mb-10 ml-2 text-lg text-amber-50"><article><div className="btn-ghost avatar grid grid-cols-1 items-center place-items-center mx-auto">
+        <div className="rounded-full w-[3.2rem]">
+              <img src={`${passport}`} alt="passport" className="pass" />
+            </div>
+            
+               
+          </div>   <p className='text-center mx-auto mt-4 text-sm'>Username: {user.username}</p>
+          <p className='text-center mx-auto mt-4 text-sm'>Account Number: {user.accountNumber}</p>
+          <p className='text-center mx-auto mt-4 text-sm'>Routing Number: {user.routingNumber}</p>
+          </article></p>
           <li><a href="/dashboard">Home</a></li>
           <li><a>Withdraw</a></li>
           <li><a>Send</a></li>

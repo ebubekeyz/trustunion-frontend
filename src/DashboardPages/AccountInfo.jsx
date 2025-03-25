@@ -24,7 +24,7 @@ const AccountInfo = () => {
 
   return (
     <Wrapper>
-      <div className="account">
+      {/* <div className="account">
         <div className="sub-menu">
           <Link to="/dashboard/account" className="editAccount">
             <FiEdit className="icon" />
@@ -78,7 +78,22 @@ const AccountInfo = () => {
             </div>
           </div>
         </article>
-      </div>
+      </div> */}
+
+
+      <section className="grid grid-cols-1 gap-4 mx-auto mt-4 md:mt-[-35rem] mb-4" style={{fontFamily:'var(--ff-header)'}}>
+        <div className="avatar">
+  <div className="ring-primary ring-offset-base-100 w-48 rounded-full ring ring-offset-2 mx-auto max-w-6xl">
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 gap-4 items-center text-center mx-auto">
+          <h1 className='font-semibold text-2xl'>{user.firstName} {user.lastName}</h1>
+          <h1 className='font-semibold text-2xl'>{user.email}</h1>
+          <button className="btn btn-block btn-md cursor-pointer">Edit Profile</button>
+       </div>
+      </section>
     </Wrapper>
   );
 };
