@@ -463,7 +463,7 @@ const Landing = () => {
   <div className="card-body ">
     <h2 className="card-title text-amber-800">Transfer from: <span className="text-black">{accountName}</span>  </h2>
                 <h2 className="card-title text-amber-800">Bank Name: <span className="text-black">{bank} </span> </h2>
-                 <h2 className="card-title text-amber-800">Transaction ID: <span className="text-black">{_id} </span> </h2>
+                 {/* <h2 className="card-title text-amber-800">Transaction ID: <span className="text-black">{_id} </span> </h2> */}
     <h2 className="card-title text-amber-800 text-sm">Date: <span className="text-black">{date2} </span> </h2>
     
     <div className="card-actions justify-end">
