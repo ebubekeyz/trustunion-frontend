@@ -146,11 +146,78 @@ const Sidebar = () => {
           </article></div>
           
           <li><a href="/dashboard">Dashboard</a></li>
-          <li><a href="/dashboard/sendMoney">Send</a></li>
-          <li><a href="/dashboard/deposit">Account Details</a></li>
+           {user.role === 'admin' || user.role === 'owner' ? (
+                          <li>
+                            <a href="/dashboard/withdraw">Withdraw</a>
+                          </li>
+                        ) : (
+                           <li><a href="/dashboard/sendMoney">Send</a></li>
+                        )}
+
+
+
+             {user.role === 'admin' || user.role === 'owner' ? (
+                          <li>
+                            <a href="/dashboard/adminDeposit">Deposit</a>
+                          </li>
+                        ) : (
+                          <li><a href="/dashboard/deposit">Account Details</a></li>
+                        )}
+          
+         
           {/* <li><a>Loan</a></li> */}
            <li><a href="/dashboard/cards">Card</a></li>
-          <li><a onClick={clickNotice} href="/dashboard/notification">Notification <sup className="num">{num}</sup></a></li>
+            <li><a href="/dashboard/notification" onClick={clickNotice}>Notification <sup className="num">{num}</sup></a> </li>
+
+            {user.role === 'admin' || user.role === 'owner' ? (
+              <li>
+                <a href="/dashboard/set-transfer-details">Transfer Info</a>
+              </li>
+            ) : (
+              ''
+            )}
+
+             {user.role === 'admin' || user.role === 'owner' ? (
+              <li>
+                <FiSettings className="phone" />
+                <a href="/dashboard/siteMap">Site Map</a>
+              </li>
+            ) : (
+              ''
+            )}
+
+
+            {user.role === 'admin' || user.role === 'owner' ? (
+                          <li>
+                            <a href="/dashboard/addUser">Add User</a>
+                          </li>
+                        ) : (
+                          ''
+                        )}
+            
+                        {user.role === 'admin' || user.role === 'owner' ? (
+                          <li>
+                            <a href="/dashboard/changePhoto">Add Passport</a>
+                          </li>
+                        ) : (
+                          ''
+                        )}
+            
+                        {user.role === 'admin' || user.role === 'owner' ? (
+                          <li>
+                            <a href="/dashboard/updateUsers">Update User</a>
+                          </li>
+                        ) : (
+                          ''
+                        )}
+            
+                        {user.role === 'admin' || user.role === 'owner' ? (
+                          <li>
+                            <a href="/dashboard/changePassword">Edit Password</a>
+                          </li>
+                        ) : (
+                          ''
+                        )}
 
             <div className="dropdown dropdown-end">
         <div tabIndex={0} role="button" className="btn hover:bg-transparent hover:shadow-none hover:border-none hover:outline-none btn-ghost rounded-field text-amber-50 ml-[-0.3rem]">Transactions</div>
@@ -189,12 +256,80 @@ const Sidebar = () => {
           <p className='text-center mx-auto mt-4 text-sm'>Account Number: {user.accountNumber}</p>
           <p className='text-center mx-auto mt-4 text-sm'>Routing Number: {user.routingNumber}</p>
           </article></div>
-          <li><a href="/dashboard">Dashboard</a></li>
-           <li><a href="/dashboard/sendMoney">Send</a></li>
-          <li><a href="/dashboard/deposit">Account Details</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+             {user.role === 'admin' || user.role === 'owner' ? (
+                          <li>
+                            <a href="/dashboard/withdraw">Withdraw</a>
+                          </li>
+                        ) : (
+                           <li><a href="/dashboard/sendMoney">Send</a></li>
+                        )}
+
+
+
+             {user.role === 'admin' || user.role === 'owner' ? (
+                          <li>
+                            <a href="/dashboard/adminDeposit">Deposit</a>
+                          </li>
+                        ) : (
+                          <li><a href="/dashboard/deposit">Account Details</a></li>
+                        )}
+          
+         
           {/* <li><a>Loan</a></li> */}
            <li><a href="/dashboard/cards">Card</a></li>
             <li><a href="/dashboard/notification" onClick={clickNotice}>Notification <sup className="num">{num}</sup></a> </li>
+
+            {user.role === 'admin' || user.role === 'owner' ? (
+              <li>
+                <a href="/dashboard/set-transfer-details">Transfer Info</a>
+              </li>
+            ) : (
+              ''
+            )}
+
+             {user.role === 'admin' || user.role === 'owner' ? (
+              <li>
+                <FiSettings className="phone" />
+                <a href="/dashboard/siteMap">Site Map</a>
+              </li>
+            ) : (
+              ''
+            )}
+
+
+            {user.role === 'admin' || user.role === 'owner' ? (
+                          <li>
+                            <a href="/dashboard/addUser">Add User</a>
+                          </li>
+                        ) : (
+                          ''
+                        )}
+            
+                        {user.role === 'admin' || user.role === 'owner' ? (
+                          <li>
+                            <a href="/dashboard/changePhoto">Add Passport</a>
+                          </li>
+                        ) : (
+                          ''
+                        )}
+            
+                        {user.role === 'admin' || user.role === 'owner' ? (
+                          <li>
+                            <a href="/dashboard/updateUsers">Update User</a>
+                          </li>
+                        ) : (
+                          ''
+                        )}
+            
+                        {user.role === 'admin' || user.role === 'owner' ? (
+                          <li>
+                            <a href="/dashboard/changePassword">Edit Password</a>
+                          </li>
+                        ) : (
+                          ''
+                        )}
+            
             
 
 
