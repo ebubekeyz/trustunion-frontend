@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Form, redirect } from 'react-router-dom';
-import Wrapper from '../assets/Register';
+import Wrapper from '../assets/AddUser';
 import { FormInput, SubmitBtn } from '../components';
 import { customFetch } from '../utils';
 import { useEffect } from 'react';
