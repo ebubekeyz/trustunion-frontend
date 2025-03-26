@@ -495,15 +495,16 @@ then close all select boxes: */
         </div>
 
         <Form method="post" className="form">
-          <h4 className="title">Send Money</h4>
+          
           <article className="from">
-            <h4>Transfer From:</h4>
-            <p>
-              {user.firstName} {user.lastName}
+               <div className="grid grid-cols-1 gap-4 place-items-center shadow shadow-sm rounded p-4 md:max-w-5xl mx-auto ">
+              <p>
+              <span className="text-amber-800 font-bold">Account Name: </span>{user.firstName} {user.lastName}
             </p>
-            <div className="acc-details">
-              <p>{user.typeOfAccount}:</p>
-              <p>{user.accountNumber}</p>
+              <p> <span className="text-amber-800 font-bold">Account Type: </span>{user.typeOfAccount}:</p>
+              <p> <span className="text-amber-800 font-bold">Account Number: </span>{user.accountNumber}</p>
+              <p> <span className="text-amber-800 font-bold">Routing Number: </span>{user.routingNumber}</p>
+              <p> <span className="text-amber-800 font-bold">Sort Code: </span>{user.sortCode}</p>
             </div>
           </article>
 
