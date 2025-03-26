@@ -508,7 +508,7 @@ then close all select boxes: */
             </div>
           </article>
 
-          <div className="custom-select md:max-w-5xl mx-auto">
+          <div className="custom-select">
             <select name="bank" id="ms" className="">
               <option value="Choose Bank">Choose Bank</option>
               <option value="Bank Of America">Bank Of America</option>
