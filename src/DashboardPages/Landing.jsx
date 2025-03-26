@@ -168,14 +168,14 @@ const Landing = () => {
 
 
 
-<Link  to="/dashboard" className="card bg-base-100 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(0,225,0,0.5)'}}>
+<Link  to="/dashboard/profile" className="card bg-base-100 image-full  w-full shadow-sm mx-auto" style={{background:'rgb(0,225,0,0.5)'}}>
   <figure>
     <img
       src=""
       alt="" />
   </figure>
   <div className="card-body grid grid-cols-1 place-items-center">
-    <p className="card-title">Loan</p>
+    <p className="card-title">Profile</p>
     {/* <p>A card component has a figure, a body part, and inside body there are title and actions parts</p> */}
     {/* <div className="card-actions justify-center">
       <button className="btn btn-primary">Buy Now</button>

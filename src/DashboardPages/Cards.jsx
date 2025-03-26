@@ -47,7 +47,7 @@ const Cards = () => {
         <div className="card-body">
          <h2 className="card-title text-amber-100">Balance</h2>
           <h2 className="card-title text-2xl">$ 0</h2>
-          <Link to="/" className="btn btn-xs w-24 ">Fund Card</Link>
+          <Link to="" className="btn btn-xs w-24 ">Fund Card</Link>
       
            <h2 className="card-title text-amber-100">Card Number</h2>
           <h2 className="card-title text-2xl">5122 3133 1002 2244</h2>

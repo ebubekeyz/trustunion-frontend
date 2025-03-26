@@ -148,7 +148,7 @@ const Sidebar = () => {
           <li><a href="/dashboard">Dashboard</a></li>
           <li><a href="/dashboard/sendMoney">Send</a></li>
           <li><a href="/dashboard/deposit">Account Details</a></li>
-          <li><a>Loan</a></li>
+          {/* <li><a>Loan</a></li> */}
            <li><a href="/dashboard/cards">Card</a></li>
           <li><a onClick={clickNotice} href="/dashboard/notification">Notification <sup className="num">{num}</sup></a></li>
 
@@ -192,7 +192,7 @@ const Sidebar = () => {
           <li><a href="/dashboard">Dashboard</a></li>
            <li><a href="/dashboard/sendMoney">Send</a></li>
           <li><a href="/dashboard/deposit">Account Details</a></li>
-          <li><a>Loan</a></li>
+          {/* <li><a>Loan</a></li> */}
            <li><a href="/dashboard/cards">Card</a></li>
             <li><a href="/dashboard/notification" onClick={clickNotice}>Notification <sup className="num">{num}</sup></a> </li>
             
