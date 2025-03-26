@@ -2,11 +2,77 @@ import { useSelector } from 'react-redux';
 import { Form, Link, redirect, useNavigate } from 'react-router-dom';
 import { SubmitBtn } from '../components';
 import { FiEdit } from "react-icons/fi";
+import { toast } from 'react-toastify';
+import { customFetch } from '../utils';
+import { useState } from 'react';
 
 export const action =
   (store) =>
   async ({ request }) => {
+      const { user } = store.getState().userState;
+    
+
+    const formData = await request.formData();
+    let data = Object.fromEntries(formData);
+    
+
+
+
    
+ let passport  = JSON.parse(localStorage.getItem('image'));
+ let terms  = JSON.parse(localStorage.getItem('image2'));
+
+
+    
+   
+     
+
+     data = {
+      ...data,
+      address: data.address || user.address,
+      country: data.country || user.country,
+      dob: data.dob || user.dob,
+       email: data.email || user.email,
+          passport: passport.src,
+          terms: terms.src,
+          
+      firstName: data.firstName || user.firstName,
+      gender: data.gender || user.gender,
+       relationship: data.relationship || user.relationship,
+       noc: data.noc || user.noc,
+      identity: data.identity || user.identity,
+      employmentStatus: data.employmentStatus || user.employmentStatus,
+      lastName: data.lastName || user.lastName,
+      maritalStatus: data.maritalStatus || user.maritalStatus,
+      occupation: data.occupation || user.occupation,
+       phone: data.phone || user.phone,
+      
+    };
+
+
+    console.log(data)
+   
+   
+
+    
+
+    try {
+const resp = await customFetch.patch(`/auth/${user._id}`, data, {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      });
+    toast.success('User Updated Successfully')
+      return redirect('/dashboard/settings');
+    }
+
+    catch (error) {
+       const errorMessage = error.resp.data.msg || 'Error';
+     
+      toast.error(`${errorMessage}`);
+      return null;
+    }
+
   };
 
 
@@ -16,59 +82,146 @@ export const action =
 
 
 const Settings = () => {
-   const user = useSelector((state) => state.userState.user);
+  const user = useSelector((state) => state.userState.user);
+ 
 
+  const [show, setShow] = useState({
+    firstName: user.firstName || '',
+    lastName: user.lastName || '',
+    phone: user.phone || '',
+    address: user.address || '',
+    noc: user.noc || '',
+    occupation: user.occupation || '',
+    relationship: user.relationship || '',
+    dob: user.dob || '',
+    terms: user.terms || '',
+    maritalStatus: user.maritalStatus || '',
+    gender: user.gender || '',
+    email: user.email || '',
+    employmentStatus: user.employmentStatus || '',
+    country: user.country || '',
+    passport: user.passport || '',
+    identity: user.identity || ''
+  })
+
+
+  const handlePassport = async (e) => {
+   let files  = e.target.files;
+        if(files.length){
+        
+          files = files[0]
+    }
+    
+   
+    const formData = new FormData();
+
+    
+    formData.append('image', files);
+
+ 
+   
+    const response = await customFetch.post('/upload', formData);
+
+    console.log(response.data.image.src)
+
+  const imgUrl = {
+    src: response.data.image.src
+  }
+  
+
+    localStorage.setItem('image', JSON.stringify(imgUrl))
+  }
+
+
+
+
+
+
+  const handleTerms = async (e) => {
+   let files  = e.target.files;
+        if(files.length){
+        
+          files = files[0]
+    }
+    
+   
+    const formData = new FormData();
+
+    
+    formData.append('image', files);
+
+ 
+   
+    const response = await customFetch.post('/upload', formData);
+
+    console.log(response.data.image.src)
+
+  const id = {
+    src: response.data.image.src
+  }
+  
+
+    localStorage.setItem('image2', JSON.stringify(id))
+  }
 
   return (
-    <div className="grid grid-cols-1 gap-4 mx-auto mt-4  mb-4" style={{ fontFamily: 'var(--ff-header)' }}>
+    <Form method="post" encType="multipart/form-data" className="grid grid-cols-1 gap-4 mx-auto mt-4  mb-4" style={{ fontFamily: 'var(--ff-header)' }}>
    
        <div className="avatar ">
   <div className="ring-primary ring-offset-base-100 w-48 rounded-full ring ring-offset-2 mx-auto max-w-6xl relative cursor-pointer">
     <img src={user.passport} />
-    <FiEdit className="absolute top-[8rem] left-[10rem]"/>
+   
+          <div className="absolute top-[8rem] left-[10rem]">
+            <div className="relative">
+              <FiEdit className="cursor-pointer absolute text-white left-1 cursor-pointer" />
+            <input type="file" className="absolute top-0 opacity-0 cursor-pointer"  id="pass" onChange={handlePassport} />
+            </div>
+          </div>
           </div>
           
       </div>
-      
-
-
-
+    
 
 
        <div className="grid grid-cols-1 gap-4  mx-auto">
-        <Form method="post" className="card-body form-control ">
+        <div className="card-body form-control ">
           
+ 
+          
+
+
         <fieldset className="fieldset md:grid md:grid-cols-2 gap-4">
          <div className=""> <label className="fieldset-label" >FirstName</label>
-          <input type="text" className="input"  name="firstName"/></div>
+              <input type="text" className="input" defaultValue={show.firstName}  name="firstName"/></div>
           
           <div> <label className="fieldset-label" >LastName</label>
-          <input type="text" className="input"  name="lastName"/></div>
+          <input type="text" className="input" defaultValue={show.lastName}  name="lastName"/></div>
 
            
 
            <div> <label className="fieldset-label" >Email</label>
-          <input type="email" className="input"  name="email"/></div>
+          <input type="email" className="input" defaultValue={show.email}   name="email"/></div>
 
            
-          <input type="text" className="input"  name="passport" hidden/>
+          <input type="text" className="input" defaultValue={show.passport}   name="passport" hidden/>
+          <input type="text" className="input" defaultValue={show.terms} name="terms" hidden/>
           
           <div> <label className="fieldset-label" >Country</label>
-          <input type="text" className="input"  name="country"/></div>
+          <input type="text" className="input" defaultValue={show.country}   name="country"/></div>
 
 
            <div> <label className="fieldset-label" >Occupation</label>
-          <input type="text" className="input"  name="occupation"/></div>
+          <input type="text" className="input" defaultValue={show.occupation}   name="occupation"/></div>
 
 
           <div> <label className="fieldset-label" >Phone</label>
-          <input type="text" className="input"  name="phone"/></div>
+          <input type="text" className="input" defaultValue={show.phone}   name="phone"/></div>
 
 
 
           <fieldset className="fieldset">
   <legend className="fieldset-label">Gender</legend>
-  <select defaultValue="Pick a browser" className="select" name="gender">
+  <select defaultValue={show.gender} className="select" name="gender">
     <option disabled={true}>Select Gender</option>
     <option value="Male">Male</option>
     <option value="Female">Female</option>
@@ -80,16 +233,16 @@ const Settings = () => {
            
           
           <div> <label className="fieldset-label" >Address</label>
-          <input type="text" className="input"  name="address"/></div>
+          <input type="text" className="input" defaultValue={show.address}  name="address"/></div>
 
             <div> <label className="fieldset-label" >Next of Kin</label>
-          <input type="text" className="input"  name="noc"/></div>
+          <input type="text" className="input" defaultValue={show.noc}   name="noc"/></div>
 
 
 
              <fieldset className="fieldset">
   <legend className="fieldset-label">Relationship</legend>
-  <select defaultValue="Pick a browser" className="select" name="identity">
+  <select defaultValue={show.relationship} className="select" name="relationship">
     <option disabled={true}>Select Identity</option>
     <option value="Brother">Brother</option>
     <option value="Father">Father</option>
@@ -104,7 +257,7 @@ const Settings = () => {
 
   <fieldset className="fieldset">
   <legend className="fieldset-label">Identity</legend>
-  <select defaultValue="Pick a browser" className="select" name="identity">
+  <select defaultValue={show.identity} className="select" name="identity">
     <option disabled={true}>Select Identity</option>
     <option value="Social Security Number">Social Security Number</option>
     <option value="Passport Number">Passport Number</option>
@@ -115,20 +268,18 @@ const Settings = () => {
 
 
 
-<div> <label className="fieldset-label" >ID Number</label>
-          <input type="text" className="input"  name="IdNumber"/></div>
-              
 
 
-            <div className="">  
-              <label className="fieldset-label" >Upload ID</label>
-              <input type="file" className="file-input" /></div>
+
+            <div className="">
+              <label className="fieldset-label" >Upload Id</label>
+              <input type="file" className="file-input"   onChange={handleTerms} /></div>
   
 
-  <div className=""> 
+  <div className="">
           <fieldset className="fieldset">
   <legend className="fieldset-label">Marital Status</legend>
-  <select defaultValue="Pick a browser" className="select" name="maritalStatus">
+  <select defaultValue={show.maritalStatus} className="select" name="maritalStatus">
     <option disabled={true}>Select Marital Status</option>
     <option value="Single">Single</option>
     <option value="Married">Married</option>
@@ -141,7 +292,7 @@ const Settings = () => {
 
 
                 <div className=""><label className="fieldset-label">Date of Birth</label>
-           <input type="date" className="input" name="dob"/></div>
+           <input type="date" className="input" defaultValue={show.dob}  name="dob"/></div>
 
 
 
@@ -149,7 +300,7 @@ const Settings = () => {
 
            <fieldset className="fieldset">
   <legend className="fieldset-label">Employment Status</legend>
-  <select defaultValue="Pick a browser" className="select" name="maritalStatus">
+  <select defaultValue={show.employmentStatus} className="select" name="employmentStatus">
     <option disabled={true}>Select Employment Status</option>
     <option value="Student">Student</option>
     <option value="Unemployed">Unemployed</option>
@@ -165,158 +316,15 @@ const Settings = () => {
         </fieldset>
 
            <SubmitBtn text="Update"/>
-              </Form>
+              </div>
           
        </div>
-   </div>
-      
+       </Form>
+    
+    
   )
 }
 export default Settings
 
 
 
-
-//  <section className="grid grid-cols-1 gap-4 mx-auto mt-4 md:mt-[-35rem] mb-4" style={{ fontFamily: 'var(--ff-header)' }}>
-//         <div className="avatar ">
-//   <div className="ring-primary ring-offset-base-100 w-48 rounded-full ring ring-offset-2 mx-auto max-w-6xl relative cursor-pointer">
-//     <img src={user.passport} />
-//     <FiEdit className="absolute top-[8rem] left-[10rem]"/>
-//           </div>
-          
-//         </div>
-       
-//         <div className="grid grid-cols-1 gap-4  mx-auto">
-//         <Form method="post" className="card-body form-control ">
-          
-//         <fieldset className="fieldset md:grid md:grid-cols-2 gap-4">
-//          <div className=""> <label className="fieldset-label" >FirstName</label>
-//           <input type="text" className="input"  name="firstName"/></div>
-          
-//           <div> <label className="fieldset-label" >LastName</label>
-//           <input type="text" className="input"  name="lastName"/></div>
-
-           
-
-//            <div> <label className="fieldset-label" >Email</label>
-//           <input type="email" className="input"  name="email"/></div>
-
-           
-//           <input type="text" className="input"  name="passport" hidden/>
-          
-//           <div> <label className="fieldset-label" >Country</label>
-//           <input type="text" className="input"  name="country"/></div>
-
-
-//            <div> <label className="fieldset-label" >Occupation</label>
-//           <input type="text" className="input"  name="occupation"/></div>
-
-
-//           <div> <label className="fieldset-label" >Phone</label>
-//           <input type="text" className="input"  name="phone"/></div>
-
-
-
-//           <fieldset className="fieldset">
-//   <legend className="fieldset-label">Gender</legend>
-//   <select defaultValue="Pick a browser" className="select" name="gender">
-//     <option disabled={true}>Select Gender</option>
-//     <option value="Male">Male</option>
-//     <option value="Female">Female</option>
-//   </select>
- 
-// </fieldset>
-
-
-           
-          
-//           <div> <label className="fieldset-label" >Address</label>
-//           <input type="text" className="input"  name="address"/></div>
-
-//             <div> <label className="fieldset-label" >Next of Kin</label>
-//           <input type="text" className="input"  name="noc"/></div>
-
-
-
-//              <fieldset className="fieldset">
-//   <legend className="fieldset-label">Relationship</legend>
-//   <select defaultValue="Pick a browser" className="select" name="identity">
-//     <option disabled={true}>Select Identity</option>
-//     <option value="Brother">Brother</option>
-//     <option value="Father">Father</option>
-//     <option value="Mother">Mother</option>
-//     <option value="Sister">Sister</option>
-//     <option value="Uncle">Uncle</option>
-//     <option value="Aunty">Aunty</option>
-//   </select>
- 
-// </fieldset>
-
-
-//   <fieldset className="fieldset">
-//   <legend className="fieldset-label">Identity</legend>
-//   <select defaultValue="Pick a browser" className="select" name="identity">
-//     <option disabled={true}>Select Identity</option>
-//     <option value="Social Security Number">Social Security Number</option>
-//     <option value="Passport Number">Passport Number</option>
-//     <option value="Driver's License Number ">Driver's License Number </option>
-//   </select>
- 
-// </fieldset>
-
-
-
-// <div> <label className="fieldset-label" >ID Number</label>
-//           <input type="text" className="input"  name="IdNumber"/></div>
-              
-
-
-//             <div className="">  
-//               <label className="fieldset-label" >Upload ID</label>
-//               <input type="file" className="file-input" /></div>
-  
-
-//   <div className=""> 
-//           <fieldset className="fieldset">
-//   <legend className="fieldset-label">Marital Status</legend>
-//   <select defaultValue="Pick a browser" className="select" name="maritalStatus">
-//     <option disabled={true}>Select Marital Status</option>
-//     <option value="Single">Single</option>
-//     <option value="Married">Married</option>
-//     <option value="Divorced">Divorced</option>
-//   </select>
- 
-// </fieldset>
-//          </div>
-
-
-
-//                 <div className=""><label className="fieldset-label">Date of Birth</label>
-//            <input type="date" className="input" name="dob"/></div>
-
-
-
-
-
-//            <fieldset className="fieldset">
-//   <legend className="fieldset-label">Employment Status</legend>
-//   <select defaultValue="Pick a browser" className="select" name="maritalStatus">
-//     <option disabled={true}>Select Employment Status</option>
-//     <option value="Student">Student</option>
-//     <option value="Unemployed">Unemployed</option>
-//     <option value="Retired">Retired</option>
-//     <option value="Self-Employed">Self-Employed</option>
-//     <option value="Employed">Employed</option>
-//   </select>
- 
-// </fieldset>
-      
-                
-             
-//         </fieldset>
-
-//            <SubmitBtn text="Update"/>
-//               </Form>
-          
-//        </div>
-//       </section>

@@ -202,6 +202,8 @@ const userSlice = createSlice({
       localStorage.removeItem('withdraw');
       localStorage.removeItem('notification');
       localStorage.removeItem('deposit');
+      localStorage.removeItem('image');
+      localStorage.removeItem('image2');
     },
     addWithdraw: (state, action) => {
       let user = JSON.parse(localStorage.getItem('user'));

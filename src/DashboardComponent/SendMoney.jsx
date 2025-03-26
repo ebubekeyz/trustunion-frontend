@@ -300,12 +300,12 @@ then close all select boxes: */
     return window.location.reload();
   };
   return (
-    <>
+    <Wrapper>
       <div className="">
         <div className="form-alert"></div>
         <div className="alert-main"></div>
 
-        {/* <div className="msg1">
+        <div className="msg1">
           <div className="msg1-cont">
             <div style={{ display: 'flex', justifyContent: 'end' }}>
               <FaTimes className="inline" onClick={closeNotice} />
@@ -492,10 +492,10 @@ then close all select boxes: */
           <button onClick={handleGeneratePdf} className="btn share-btn">
             <FiDownload />
           </button>
-        </div> */}
+        </div>
 
         <Form method="post" className="form">
-          {/* <h4 className="title">Send Money</h4>
+          <h4 className="title">Send Money</h4>
           <article className="from">
             <h4>Transfer From:</h4>
             <p>
@@ -505,15 +505,11 @@ then close all select boxes: */
               <p>{user.typeOfAccount}:</p>
               <p>{user.accountNumber}</p>
             </div>
-          </article> */}
+          </article>
 
-
-
-             <fieldset className="fieldset">
-
-  <select defaultValue="Pick a browser" className="select" name="bank">
-    <option disabled={true}>Choose Bank</option>
-     <option value="Choose Bank">Choose Bank</option>
+          <div className="custom-select">
+            <select name="bank" id="ms" className="">
+              <option value="Choose Bank">Choose Bank</option>
               <option value="Bank Of America">Bank Of America</option>
               <option value="Capital One">Capital One</option>
               <option value="Chase Bank (Jp Morgan Chase)">
@@ -528,44 +524,33 @@ then close all select boxes: */
               <option value="U.S. Bancorp">U.S. Bancorp</option>
               <option value="USAA">USAA</option>
               <option value="Wells Fargo Bank">Wells Fargo Bank</option>
-  </select>
- 
-</fieldset>
+            </select>
+          </div>
 
-         
-         
+          <article className="to">
             <div>
-              
-              
-            <div > <label className="fieldset-label" >Account Number</label>
-          <input type="text" className="input"  name="accountNumber" /></div>
-              {/* <FormInput
+              <h4>Transfer To:</h4>
+              <FormInput
                 placeholder="Beneficiary Account Number"
                 name="accountNumber"
                 id="acc"
-              /> */}
+              />
 
-
-  <div > <label className="fieldset-label" >Routing Number</label>
-          <input type="text" className="input"   name="routingNumber" /></div>
-               {/* <FormInput
+               <FormInput
                 placeholder="Routing Number"
                 name="routingNumber"
                 id="routingNumber"
-              /> */}
+              />
 
-
-<div id="senderName"> <label className="fieldset-label" >Account Name</label>
-          <input type="text" className="input"   name="accountName" /></div>
-              {/* <div className="input-show" style={{ width: '100%' }}>
+              <div className="input-show" style={{ width: '100%' }}>
                 <FormInput
                   name="accountName"
                   id="senderName"
                   placeholder="Account Name"
                 />
-              </div> */}
+              </div>
             </div>
-          
+          </article>
 
           <span onClick={handleConfirm} className="btn confirm-btn">
             Confirm Receiver
@@ -651,7 +636,7 @@ then close all select boxes: */
           )}
         </Form>
       </div>
-    </>
+    </Wrapper>
   );
 };
 export default SendMoney;

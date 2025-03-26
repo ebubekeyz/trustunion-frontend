@@ -28,7 +28,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { customFetch } from '../utils';
 
-const Sidebar = ({ onClick, onClick2 }) => {
+const Sidebar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -76,142 +76,7 @@ const Sidebar = ({ onClick, onClick2 }) => {
         ? 'http://localhost:7000'
         : 'https://trustunion-backend.onrender.com';
   return (
-    // <Wrapper>
-    //   <aside onClick={onClick2} className="sidebar" id="sidebar">
-    //     <div>
-    //       <button className="close-btn" id="close-btn">
-    //         <FaTimes onClick={onClick} />
-    //       </button>
-    //       {/* nav-links  */}
-
-    //       <ul className="sidebar-links">
-    //         <div className="sidebar-logo">
-    //           <img src="/logo.png" className="side-logo" alt="logo" />
-    //         </div>
-
-    //         <li>
-    //           <FaHome className="home" />
-    //           <a href="/dashboard">home</a>
-    //         </li>
-    //         <li>
-    //           <FaPerson className="person" />
-    //           <a href="/dashboard/accountInfo">Account</a>
-    //         </li>
-
-    //         {user.role === 'admin' || user.role === 'owner' ? (
-    //           <li>
-    //             <FaMoneyBillTransfer className="question" />
-    //             <a href="/dashboard/withdraw">Withdraw</a>
-    //           </li>
-    //         ) : (
-    //           <li>
-    //             <FaMoneyBillTransfer className="question" />
-    //             <a href="/dashboard/sendMoney">Send Money</a>
-    //           </li>
-    //         )}
-
-    //         {user.role === 'admin' || user.role === 'owner' ? (
-    //           <li>
-    //             <FaMoneyBills className="phone" />
-    //             <a href="/dashboard/adminDeposit">Deposit</a>
-    //           </li>
-    //         ) : (
-    //           <li>
-    //             <FaMoneyBills className="phone" />
-    //             <a href="/dashboard/deposit">Deposit</a>
-    //           </li>
-    //         )}
-
-    //         {user.role === 'admin' || user.role === 'owner' ? (
-    //           <li>
-    //             <FaMoneyBills className="phone" />
-    //             <a href="/dashboard/set-transfer-details">Transfer Info</a>
-    //           </li>
-    //         ) : (
-    //           ''
-    //         )}
-
-    //         {user.role === 'admin' || user.role === 'owner' ? (
-    //           <li>
-    //             <FiSettings className="phone" />
-    //             <a href="/dashboard/notificationMessage">Notification</a>
-    //           </li>
-    //         ) : (
-    //           ''
-    //         )}
-
-    //         {user.role === 'admin' || user.role === 'owner' ? (
-    //           <li>
-    //             <FiSettings className="phone" />
-    //             <a href="/dashboard/siteMap">Site Map</a>
-    //           </li>
-    //         ) : (
-    //           ''
-    //         )}
-    //         <li>
-    //           <FaIdCard className="service" />
-    //           <a href="/dashboard/cards">Card</a>
-    //         </li>
-
-    //         <li>
-    //           <FaReceipt className="service" />
-    //           <a href="/dashboard/transaction">Transactions</a>
-    //         </li>
-
-    //         {user.role === 'admin' || user.role === 'owner' ? (
-    //           <li>
-    //             <FaEdit className="service" />
-    //             <a href="/dashboard/addUser">Add User</a>
-    //           </li>
-    //         ) : (
-    //           ''
-    //         )}
-
-    //         {user.role === 'admin' || user.role === 'owner' ? (
-    //           <li>
-    //             <FaEdit className="service" />
-    //             <a href="/dashboard/changePhoto">Add Passport</a>
-    //           </li>
-    //         ) : (
-    //           ''
-    //         )}
-
-    //         {user.role === 'admin' || user.role === 'owner' ? (
-    //           <li>
-    //             <FaEdit className="service" />
-    //             <a href="/dashboard/updateUsers">Update User</a>
-    //           </li>
-    //         ) : (
-    //           ''
-    //         )}
-
-    //         {user.role === 'admin' || user.role === 'owner' ? (
-    //           <li>
-    //             <FaEdit className="service" />
-    //             <a href="/dashboard/changePassword">Edit Password</a>
-    //           </li>
-    //         ) : (
-    //           ''
-    //         )}
-
-    //         {/* {user.role === 'admin' || user.role === 'owner' ? (
-    //           <li>
-    //             <FaEdit className="service" />
-    //             <a href="/dashboard/delete">Delete Items</a>
-    //           </li>
-    //         ) : (
-    //           ''
-    //         )} */}
-    //       </ul>
-
-    //       <div className="power" onClick={handleLogout}>
-    //         <FaPowerOff className="power-btn" />
-    //         <span className="logout">Logout</span>
-    //       </div>
-    //     </div>
-    //   </aside>
-    // </Wrapper>
-
+    
 
    <div className="drawer">
   <input id="my-drawer" type="checkbox" className="drawer-toggle" />
@@ -269,7 +134,7 @@ const Sidebar = ({ onClick, onClick2 }) => {
     <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
     <ul className="menu bg-[#6b551d] text-amber-50 min-h-full w-80 p-4  ">
       {/* Sidebar content here */}
-      <p className="mb-10 text-lg text-amber-50"><article><div className="btn-ghost avatar grid grid-cols-1 items-center place-items-center mx-auto">
+      <div className="mb-10 text-lg text-amber-50"><article><div className="btn-ghost avatar grid grid-cols-1 items-center place-items-center mx-auto">
         <div className="rounded-full w-[3.2rem]">
               <img src={`${passport}`} alt="passport" className="pass" />
             </div>
@@ -278,7 +143,7 @@ const Sidebar = ({ onClick, onClick2 }) => {
           </div>   <p className='text-center mx-auto mt-4 text-sm'>Username: {user.username}</p>
             <p className='text-center mx-auto mt-4 text-sm'>Account Number: {user.accountNumber}</p>
              <p className='text-center mx-auto mt-4 text-sm'>Routing Number: {user.routingNumber}</p>
-          </article></p>
+          </article></div>
           
           <li><a href="/dashboard">Dashboard</a></li>
           <li><a href="/dashboard/sendMoney">Send</a></li>
@@ -314,7 +179,7 @@ const Sidebar = ({ onClick, onClick2 }) => {
     <label htmlFor="my-drawer-2" aria-label="close sidebar" className=""></label>
    <ul className="menu bg-[#6b551d] text-amber-50 min-h-full w-80 p-4"  >
       {/* Sidebar content here */}
-      <p className="mb-10 ml-2 text-lg text-amber-50"><article><div className="btn-ghost avatar grid grid-cols-1 items-center place-items-center mx-auto">
+      <div className="mb-10 ml-2 text-lg text-amber-50"><article><div className="btn-ghost avatar grid grid-cols-1 items-center place-items-center mx-auto">
         <div className="rounded-full w-[3.2rem]">
               <img src={`${passport}`} alt="passport" className="pass" />
             </div>
@@ -323,7 +188,7 @@ const Sidebar = ({ onClick, onClick2 }) => {
           </div>   <p className='text-center mx-auto mt-4 text-sm'>Username: {user.username}</p>
           <p className='text-center mx-auto mt-4 text-sm'>Account Number: {user.accountNumber}</p>
           <p className='text-center mx-auto mt-4 text-sm'>Routing Number: {user.routingNumber}</p>
-          </article></p>
+          </article></div>
           <li><a href="/dashboard">Dashboard</a></li>
            <li><a href="/dashboard/sendMoney">Send</a></li>
           <li><a href="/dashboard/deposit">Account Details</a></li>
