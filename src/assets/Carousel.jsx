@@ -16,11 +16,11 @@ const Wrapper = styled.section`
 
 .hero {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 174, 186, 0.7)), to(rgba(0, 0, 0, 0.7))),
-      url('/pers.avif') center/cover no-repeat scroll;
+      url('/pers.jpg') center/cover no-repeat scroll;
     background: -o-linear-gradient(rgba(0,0,0, 0.5), rgba(0, 0, 0, 0.7)),
-      url('/pers.avif') center/cover no-repeat scroll;
+      url('/pers.jpg') center/cover no-repeat scroll;
     background: linear-gradient(rgba(0,0,0, 0.5), rgba(0, 0, 0, 0.7)),
-      url('/pers.avif') center/cover no-repeat scroll;
+      url('/pers.jpg') center/cover no-repeat scroll;
    
   }
   .hero-banner {
