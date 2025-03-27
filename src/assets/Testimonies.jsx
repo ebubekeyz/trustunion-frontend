@@ -10,7 +10,7 @@ const Wrapper = styled.section`
   }
   .slider-container {
     margin: 0 auto;
-    margin-top: 4rem;
+    margin-top: 2rem;
     width: 80vw;
     max-width: 800px;
     position: relative;

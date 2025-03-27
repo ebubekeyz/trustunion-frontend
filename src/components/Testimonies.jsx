@@ -62,7 +62,7 @@ const Testimonies = () => {
   return (
     <Wrapper>
       <div className="title">
-        {/* <h2 className='text-4xl md:text-5xl font-bold' >Reviews</h2> */}
+        <h3 className='text-center text-4xl md:text-5xl font-bold py-4'>Testimonies</h3>
       </div>
       <section className="slider-container">
         {people.map((person, personIndex) => {

@@ -3,64 +3,32 @@ import { blog } from '../utils';
 
 const Blog = () => {
   return (
-    <div className="grid md:grid-cols-3 grid-cols-1 gap-4 align-element gap-x-8 py-6 items-center">
+    <div className="grid grid-cols-1 md:grid-cols-3 place-items-center mx-auto gap-1 md:max-w-6xl pt-0 mt-0">
+        <h3 className='text-center text-4xl md:text-5xl font-bold py-4'>Blog</h3>
      {blog.map((item) => {
             const { id, image, image2, text, title } = item;
             return (
-<div className="card bg-base-100 w-96 shadow-sm">
+  <div key={id} className="card bg-base-100 max-w-80 shadow-sm">
   <figure>
     <img
       src={image}
-      alt="Shoes" />
+      alt="" />
   </figure>
   <div className="card-body">
     <h2 className="card-title">{title}</h2>
     <p>{text}</p>
     <div className="card-actions justify-end">
-      <Link to={`/singleBlog/${id}`} className="btn btn-outline">Read More</Link>
+      <Link to={`/singleBlog/${id}`} className="btn btn-primary">Read More</Link>
     </div>
   </div>
 </div>
+      
             )
           })
             }
       
-
-      
-      {/* <section className="section blog">
-       
-        <div className="section-title">
-          <h2>blog</h2>
-          <div className="underline"></div>
-        </div>
-      
-        <div className="section-center blog-center">
-         
-          {blog.map((item) => {
-            const { id, image, image2, text, title } = item;
-            return (
-              <article key={id} className="card">
-             
-                <div className="card-side card-front">
-                  <img src={image} alt="project1" />
-                  <div className="card-info">
-                    <h4>{title}</h4>
-                    <p>{text}</p>
-                  
-                  </div>
-                </div>
-             
-                <div className="card-side card-back">
-                  <Link to={`/singleBlog/${id}`} className="btn">
-                    read more
-                  </Link>
-                </div>
-              </article>
-            );
-          })}
-          
-        </div>
-      </section> */}
+    
+     
     </div>
   );
 };
