@@ -167,7 +167,17 @@ const Sidebar = () => {
          
           {/* <li><a>Loan</a></li> */}
            <li><a href="/dashboard/cards">Card</a></li>
+            {user.role === 'admin' || user.role === 'owner' ? (
+                          <li>
+                            <FiSettings className="phone" />
+                            <a href="/dashboard/notificationMessage">Notification</a>
+                          </li>
+                        ) : (
+             
+          
             <li><a href="/dashboard/notification" onClick={clickNotice}>Notification <sup className="num">{num}</sup></a> </li>
+                      
+                        )}
 
             {user.role === 'admin' || user.role === 'owner' ? (
               <li>
@@ -277,8 +287,20 @@ const Sidebar = () => {
           
          
           {/* <li><a>Loan</a></li> */}
-           <li><a href="/dashboard/cards">Card</a></li>
+         
+
+ <li><a href="/dashboard/cards">Card</a></li>
+             {user.role === 'admin' || user.role === 'owner' ? (
+                          <li>
+                            <FiSettings className="phone" />
+                            <a href="/dashboard/notificationMessage">Notification</a>
+                          </li>
+                        ) : (
+             
+          
             <li><a href="/dashboard/notification" onClick={clickNotice}>Notification <sup className="num">{num}</sup></a> </li>
+                      
+                        )}
 
             {user.role === 'admin' || user.role === 'owner' ? (
               <li>
