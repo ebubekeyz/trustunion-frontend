@@ -51,7 +51,7 @@ export const blog = [
 export const service = [
   {
     id: 1,
-    image: '/service.jpg',
+    image: '/service1.jpg',
     title: 'Account Management',
     text: 'Effortlessly pay your bills directly from your account. Manage payments, track due dates, and keep your finances organized all in one place.',
     subtitle1: 'Checking Accounts:',
@@ -76,7 +76,7 @@ export const service = [
 
   {
     id: 2,
-    image: '/service2.jpg',
+    image: '/hero-1.jpg',
     title: 'Bill Payment',
     text: 'Pay your bills quickly and securely online. Set up one-time or recurring payments with ease, all from your account dashboard.',
     subtitle1: 'Business Checking Accounts:',
@@ -105,7 +105,7 @@ export const service = [
 
   {
     id: 3,
-      image: '/service3.jpg',
+      image: '/banner.jpg',
     title: 'Fund Transfer',
     text: 'Easily transfer funds to pay bills directly from your account. Set up automatic or one-time payments for a hassle-free experience.',
     subtitle1: 'Business Checking Accounts:',
@@ -130,7 +130,7 @@ export const service = [
 
    {
     id: 4,
-     image: '/service4.jpg',
+     image: '/budget.jpg',
     title: 'Mobile Deposit',
     text: 'Use mobile deposit to quickly pay bills by uploading checks. Enjoy secure, fast payments from the convenience of your phone.',
     subtitle1: 'Business Checking Accounts:',
@@ -155,7 +155,7 @@ export const service = [
    
     {
     id: 5,
-   image: '/service5.jpg',
+   image: '/business.jpg',
     title: 'Loan Management',
     text: 'Pay your loan installments effortlessly online. Schedule one-time or recurring payments to stay on track with your loan management.',
     subtitle1: 'Business Checking Accounts:',
@@ -182,7 +182,7 @@ export const service = [
     
      {
     id: 6,
-      image: '/service6.jpg',
+      image: '/business-banking.jpg',
     title: 'Credit Card Management',
     text: 'Easily pay your credit card bills online. Set up one-time or recurring payments to keep your account up-to-date and avoid late fees.',
     subtitle1: 'Business Checking Accounts:',
@@ -210,7 +210,7 @@ export const service = [
      
       {
     id: 7,
-      image: '/service7.jpg',
+      image: '/hero-2.jpg',
     title: 'Investment Options',
     text: 'Seamlessly pay for your investments online. Manage your portfolio and make payments for investment purchases with ease and security.',
     subtitle1: 'Business Checking Accounts:',
@@ -238,7 +238,7 @@ export const service = [
       
        {
     id: 8,
-    image: '/service8.avif',
+    image: '/hero-3.avif',
     title: 'Security Features',
     text: 'Pay your bills securely with advanced encryption. Our robust security features protect every transaction, ensuring peace of mind with every payment.',
     subtitle1: 'Business Checking Accounts:',
@@ -264,7 +264,7 @@ export const service = [
      
       {
     id: 8,
-    image: '/service9.jpg',
+    image: '/hero-4.avif',
     title: 'Customer Support',
     text: 'Pay your bills effortlessly online with our easy-to-use platform. Need help? Our customer support team is ready to assist you at any time.',
     subtitle1: 'Business Checking Accounts:',
@@ -292,7 +292,7 @@ export const service = [
       
       {
     id: 9,
-    image: '/service10.avif',
+    image: '/motgage.jpg',
     title: 'Financial Planning Tool',
     text: 'Easily pay bills online while tracking expenses with our financial planning tools. Stay on top of your budget and manage payments seamlessly.',
     subtitle1: 'Business Checking Accounts:',
