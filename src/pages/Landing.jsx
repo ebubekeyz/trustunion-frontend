@@ -29,6 +29,7 @@ const Landing = () => {
       {/* <Timeline /> */}
       <About />
       <Services />
+           <Testimonies />
     </>
   );
 };

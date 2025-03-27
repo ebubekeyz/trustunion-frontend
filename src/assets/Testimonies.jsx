@@ -33,6 +33,7 @@ const Wrapper = styled.section`
     margin-bottom: 1rem;
     object-fit: cover;
     margin: 1rem auto;
+    margin-top: 0;
     border: 4px solid var(--primary-200);
     box-shadow: var(--shadow-3);
   }
@@ -103,7 +104,7 @@ const Wrapper = styled.section`
 
   .slick-container {
     margin: 0 auto;
-    margin-top: 10rem;
+   
     width: 80vw;
     max-width: 800px;
     text-align: center;

@@ -62,7 +62,7 @@ const Testimonies = () => {
   return (
     <Wrapper>
       <div className="title">
-        <h2>Reviews</h2>
+        <h2 className='text-4xl md:text-5xl font-bold' >Reviews</h2>
       </div>
       <section className="slider-container">
         {people.map((person, personIndex) => {
@@ -81,7 +81,7 @@ const Testimonies = () => {
               <h5 className="name">{name}</h5>
               {/* <p className="title">{title}</p> */}
               <p className="text">{quote}</p>
-              <FaQuoteRight className="icon" />
+              {/* <FaQuoteRight className="icon" /> */}
             </article>
           );
         })}
