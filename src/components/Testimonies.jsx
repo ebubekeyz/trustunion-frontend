@@ -6,28 +6,28 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 const list = [
   {
     id: 1,
-    image: '/person3.jpg',
-    name: 'Emily R. - Personal Banking',
+    image: '/person1.jpg',
+    name: 'John',
     title: 'office manager',
     quote:
-      'I have been a customer of Pledge Bank for over 10 years, and I could not be happier with the service. The staff is always friendly and ready to help. I especially appreciate the convenience of their mobile banking app, which makes managing my finances on the go so easy. Plus, the interest rates on their savings accounts are among the best I have found. Highly recommend!',
+      'Trust Union Bank has completely changed the way I manage my finances. I can pay bills, transfer money, and track my spending all from my phone. It is fast, secure and convenient.',
   },
   {
     id: 2,
-    image: '/person1.jpg',
-    name: 'James T. - Business Banking',
+    image: '/person3.jpg',
+    name: 'Sarah',
     title: 'regular guy',
     quote:
-      'Pledge Bank has been an invaluable partner for my small business. Their business checking account is straightforward and hassle-free, and the cash management services have streamlined our operations significantly. Whenever I have needed assistance, their customer service team has been prompt and professional. Thanks to [Bank Name], managing our finances has never been easier.',
+      'I love the convenience of Trust Union Bank. I can handle everything from my savings to investments with just a few clicks. Plus, customer support is always responsive if I need help.',
   },
 
   {
     id: 3,
     image: '/person2.png',
-    name: 'Micheal B. - Investment Services',
+    name: 'Carlos',
     title: 'the boss',
     quote:
-      'I decided to move my investment accounts to Pledge Bank after a friend recommended their wealth management services. It is been a great decision. My financial advisor took the time to understand my goals and risk tolerance, and we have seen consistent growth in my portfolio. I feel confident that my financial future is in good hands.',
+      'As someone who travels a lot, Trust Union Bank has made it so much easier to access my accounts from anywhere. I no longer need to worry about banking hours or finding an ATM.',
   },
 ];
 
@@ -62,7 +62,7 @@ const Testimonies = () => {
   return (
     <Wrapper>
       <div className="title">
-        <h2 className='text-4xl md:text-5xl font-bold' >Reviews</h2>
+        {/* <h2 className='text-4xl md:text-5xl font-bold' >Reviews</h2> */}
       </div>
       <section className="slider-container">
         {people.map((person, personIndex) => {
@@ -85,10 +85,10 @@ const Testimonies = () => {
             </article>
           );
         })}
-        <button className="prev" onClick={prevSlide}>
+        <button className="prev btn btn-active" onClick={prevSlide}>
           <FiChevronLeft />
         </button>
-        <button className="next" onClick={nextSlide}>
+        <button className="next btn btn-active" onClick={nextSlide}>
           <FiChevronRight />
         </button>
       </section>
