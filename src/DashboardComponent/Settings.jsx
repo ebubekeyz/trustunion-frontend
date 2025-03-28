@@ -15,12 +15,12 @@ export const action =
     const formData = await request.formData();
     let data = Object.fromEntries(formData);
     
-
+console.log(data)
 
 
    
- let passport  = JSON.parse(localStorage.getItem('image'));
- let terms  = JSON.parse(localStorage.getItem('image2'));
+ let passport  = JSON.parse(localStorage.getItem('image')) || data.passport;
+ let terms  = JSON.parse(localStorage.getItem('image2')) || data.passport;
 
 
     
@@ -33,8 +33,8 @@ export const action =
       country: data.country || user.country,
       dob: data.dob || user.dob,
        email: data.email || user.email,
-          passport: passport.src,
-          terms: terms.src,
+          passport: passport.src || user.passport,
+          terms: terms.src || user.terms,
           
       firstName: data.firstName || user.firstName,
       gender: data.gender || user.gender,
@@ -50,7 +50,7 @@ export const action =
     };
 
 
-    console.log(data)
+//     console.log(data)
    
    
 
@@ -83,6 +83,7 @@ const resp = await customFetch.patch(`/auth/${user._id}`, data, {
 
 const Settings = () => {
   const user = useSelector((state) => state.userState.user);
+  
  
 
   const [show, setShow] = useState({
@@ -173,7 +174,7 @@ const Settings = () => {
    
           <div className="absolute top-[8rem] left-[10rem]">
             <div className="relative">
-              <FiEdit className="cursor-pointer absolute text-white left-1 cursor-pointer" />
+              <FiEdit className="cursor-pointer absolute text-black left-1 cursor-pointer" />
             <input type="file" className="absolute top-0 opacity-0 cursor-pointer"  id="pass" onChange={handlePassport} />
             </div>
           </div>
